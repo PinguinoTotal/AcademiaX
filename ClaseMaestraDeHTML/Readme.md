@@ -1,7 +1,6 @@
 # Clase Maestra de HTML
 
 ## PrimerosPasos
-
 ### Partes
 ~~~html
 <!--Poner comentarios-->
@@ -102,6 +101,13 @@ solo se usa para darles la "importancia"-->
     <dd>Es un lenguaje de demarcado de texto.</dd>
     <dd>Se utiliza para el desarrollo de páginas de Internet.</dd>
 </dl>
+
+<!--Minireto-->
+<ul>
+    <li>marco de plástico</li>
+    <li>lente compuesta</li>
+    <li>no polarizado</li>
+</ul>
 ~~~
 
 ### Formatos
@@ -138,6 +144,9 @@ solo se usa para darles la "importancia"-->
 <p>n <sup>2</sup></p>
 
 <p>Referencia a un libro. <sup>1</sup></p>
+
+<!--MiniReto-->
+<code>git commit --amend</code>
 ~~~
 
 ### Citas
@@ -152,6 +161,21 @@ solo se usa para darles la "importancia"-->
 <!--Este pone las comillas en la cira-->
 <p>José Mujica dijo:
     <q>Ser libre es gastar la mayor cantidad de tiempo de nuestra vida en aquello que nos gusta hacer</q>
+</p>
+
+<!--mini reto-->
+<blockquote>
+  Primero, las máquinas harán muchos trabajos por nosotros y no serán súper
+  inteligentes. Eso debería ser positivo si lo gestionamos bien. Unas décadas
+  después de eso, la IA puede ser bastante fuerte como para ser una
+  preocupación.<sup>[1]</sup>
+</blockquote>
+
+<p>
+  1. "<cite
+    >Bill Gates dice que deberías preocuparte por la inteligencia
+    artificial</cite
+  >". Forbes. Febrero de 2015.
 </p>
 ~~~
 
@@ -171,19 +195,107 @@ solo se usa para darles la "importancia"-->
     <time datetime="2024-04-20 10:00-0800">10</time>
 
 </p>
+
+<!--mini reto-->
+<time datetime='2022-01-01'>Hace 3 días</time>
+
 ~~~
 
 ### Reto: Textos
 ~~~html
+<h1>Conoce Mi Ciudad Favorita</h1>
+<p>Descubre por qué amos esta ciudad</p>
+<h2>Descipción de la Ciudad</h2>
+<p>
+  Mi ciudad es un lugar maravilloso para visitar. Está ubicada en un hermoso
+  valle rodedo de montañas y cuenta con un clima agradable durante todo el año.
+</p>
+<h2>Lugares de Interés</h2>
+
+<ul>
+  <li>
+    <a href="#">El Parque Central</a> - Un lugar perfecto para alejarse y
+    disfrutar de la naturaleza
+  </li>
+  <li>
+    <a href="#">El muso de Arte</a> - Exhibe una impresionante colección de obras maestras.
+  </li>
+  <li>
+    <a href="#">El muso de Arte</a> - Ideal para los amantes del sol y el mar.
+  </li>
+</ul>
+
+<h2>Una Cita Inspiradora</h2>
+<p>
+  <q>La verdadera belleza de esta ciudad se encuentra en la amabilidad de su gente y en la diversidad de sus culturas</q> <br/>
+</p>
+<p>- Un residente Local</p>
+
+<h2>El tiempo Hoy</h2>
+<p>El clima en mi ciudad favorita es siempre agradable: <br/> </p>
+<p><time datetime="25-09-2023">25 de septiembre de 2023</time> <br></p>
+<p>!Espero que disfrutes explorando mi ciudad favorita tanto como yo!</p>
 
 ~~~
 
 ## Navegación
 ### Vinculos
+~~~html
+<!--Vinculos-->
+<!--los vinculos nos llevan a otras paginas cuando les damos click-->
+<a href="Blog.html">Ir a la página de Blog</a>
+
+<!--mini reto-->
+<a href="https://es.wikipedia.org/wiki/Algoritmo_de_Dijkstra">Algoritmo de Dijkstra - Wikipedia, la enciclopedia libre</a>
+~~~
 ### Rutas
+siempre usar las rutas relativas, porque esas no se rompen tan facilmente 
+~~~html
+<!--mini reto-->
+<a href='https://en.wikipedia.org/wiki/Main_Page'>Haz clic aquí</a>
+~~~
 ### Navegar
+~~~html
+<h1>Hola soy un blog</h1>
+<!--asi se sale de la carpeta en la que estamos y vamos a otra-->
+<a href="../2_Textos/Texto.html"></a>
+
+<!--mini reto-->
+<!--Este es un tipo de enlace de ancla
+este no nos lleva a un apagina, nos lleva a una parte de la pagina 
+en la cual ya estamos-->
+<a href="#contacto">Ir a contacto</a>
+
+~~~
 ### Barras
+~~~html
+<!--Barra de Navegacion-->
+<!--El role es el rol que le daremos a la barra-->
+<!--el aria label es el nombre de la barra-->
+<nav role="navegation" aria-label="menú principal">
+    <a href="/">Hogar</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/sections/about.html">Acerca De</a>
+</nav>
+
+<!--Pie de pagina-->
+<footer>
+    <a href="/">Hogar</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/sections/about.html">Acerca De</a>
+</footer>
+
+<!--Mini reto-->
+<nav>
+    <a href='/store'>Store</a>
+    <a href='/mac'>Mac</a>
+    <a href='/ipad'>iPad</a>
+</nav>
+~~~
 ### Reto: Navegación
+~~~html
+
+~~~
 
 ## Imágenes
 ### Imagenes
@@ -242,7 +354,8 @@ solo se usa para darles la "importancia"-->
 ### ¿Que viene despúes?
 ### Preguntas de entrevista
 
-
+## Opiniones 
+me gustaria que despues del video te lleve a la seccion de reto, porque la primera seccion no lo sabia y me brinque los retos 
 
 ----------------------------
 ~~~html
