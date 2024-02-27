@@ -439,15 +439,126 @@ en la cual ya estamos-->
 ~~~
 
 ### Reto: Imágenes
+**galeria.html**
 ~~~html
-
+<h1>Mi galeria</h1>
+<ul>
+    <li><a href="ardilla.html"><img src="img/ardilla.jpg" alt="imagen de ardilla" width="100"></a></li>
+    <li><a href="obeja.html"><img src="img/obeja.jpg" alt="imagen de obeja" width="100"></a></li>
+    <li><a href="tucan.html"><img src="img/tucan.jpg" alt="imagen de tucan" width="100"></a></li>
+</ul>
+~~~
+**ardilla.html**
+~~~html
+<h1>Imagen1</h1>
+<img src="img/ardilla.jpg" alt="imagen de ardilla" width="1000">
+<br/>
+<a href="galeria.html">regresar</a>
+~~~
+**obeja.html**
+~~~html
+<h1>Imagen2</h1>
+<img src="img/obeja.jpg" alt="imagen de obeja" width="1000">
+</br>
+<a href="galeria.html">regresar</a>
+~~~
+**tucan.html**
+~~~html
+<h1>Imagen 3</h1>
+<img src="img/tucan.jpg" alt="imagen de tucan" width="1000">
+<br/>
+<a href="galeria.html">regresar</a>
 ~~~
 
 ## Multimedia
 ### Audio
+~~~html
+<!--esto es un audio
+cotrols = "habilitar controles de la pista"
+loop = "Que se reproduzca en loop"
+autoplay = "que empezando la pagina se ponga play"-->
+<audio controls src="audio.mp3" loop autoplay></audio>
+
+<!--otra manera de poner un audio-->
+<audio controls loop autoplay>
+    <!--Esta manera le da alternativas al buscador para que si no corre 
+    alguna de las opciones pueda correr otro tipo de archivo de audio
+    y si no es ocmpatible ocn nin guna pues muestre un mensaje-->
+    <source src="audio.mp3" type="audio/mpeg">
+    <source src="audio.ogg" type="audio/ogg; codec=opus">
+    Lo sentimos. Tu navegador no soporta este formato.
+</audio>
+
+<!--mini reto-->
+<audio controls>
+    <source src='/machina.mp3' type='audio/mpeg'>
+</audio>
+~~~
 ### Video
+~~~html
+<!--El elemento video es muy similar al audio
+compartiendo asi varios de sus atributos-->
+<video width="320" height="240" controls>
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.ogg" type="video/ogg">
+    Tu navegador no soporta videos.
+</video>
+
+<!--mini reto-->
+<video>
+    <source src='/df78dfj4350.mp4' type='video/mp4'>
+</video>
+~~~
 ### Marco
+~~~html
+<!--esta etiqueta permite poner contenido de otros sitios web 
+en tu pagina-->
+<!--cuando a un elemento le das compartir este ya te lanza el 
+copiar y pegar de este codigo para incorporarlo a la pagina-->
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/5893ns8UnOE?si=hCh-GgjsGwW0Ad8o"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+></iframe>
+
+<!--mini reto-->
+
+<iframe src='https://www.youtube.com/embed/dQw4w9WgXcQ' width='560' height='315' ></iframe>
+
+~~~
 ### Reto:Multimedia
+siempre es mejor poner los resourses por si no se pueden cargar de manera correcta tener un respaldo de que muestre un texto de que no pudieron ser cargados
+~~~html
+<body>
+  <h1>Multimedia en HTML</h1>
+
+  <h2>Audio</h2>
+  <audio controls>
+    <source src="audio.mp3" type="audio/mp3">
+    Tu navegador no soporta audios
+  </audio>
+
+  <h2>Video</h2>
+  <video width="400">
+    <source src="video.mp4" type="video/mp4">
+  </video>
+  
+  <h2>Inframe</h2>
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/4moCNEl6ljs?si=ZBCXflLVNsE_682U"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+</body>
+~~~
 
 ## Contenido
 ### Contenedores

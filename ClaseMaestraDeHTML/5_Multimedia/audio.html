@@ -1,0 +1,20 @@
+<!--esto es un audio
+cotrols = "habilitar controles de la pista"
+loop = "Que se reproduzca en loop"
+autoplay = "que empezando la pagina se ponga play"-->
+<audio controls src="audio.mp3" loop autoplay></audio>
+
+<!--otra manera de poner un audio-->
+<audio controls loop autoplay>
+    <!--Esta manera le da alternativas al buscador para que si no corre 
+    alguna de las opciones pueda correr otro tipo de archivo de audio
+    y si no es ocmpatible ocn nin guna pues muestre un mensaje-->
+    <source src="audio.mp3" type="audio/mpeg">
+    <source src="audio.ogg" type="audio/ogg; codec=opus">
+    Lo sentimos. Tu navegador no soporta este formato.
+</audio>
+
+<!--mini reto-->
+<audio controls>
+    <source src='/machina.mp3' type='audio/mpeg'>
+</audio>
