@@ -260,6 +260,10 @@ siempre usar las rutas relativas, porque esas no se rompen tan facilmente
 <!--asi se sale de la carpeta en la que estamos y vamos a otra-->
 <a href="../2_Textos/Texto.html"></a>
 
+<!--con el atributo target decimos como queremos abrir la pagina
+en estecaso queremos que abra en euna nueva pagina-->
+<a href="../2_Textos/Texto.html" target="_blank"></a>
+
 <!--mini reto-->
 <!--Este es un tipo de enlace de ancla
 este no nos lleva a un apagina, nos lleva a una parte de la pagina 
@@ -294,15 +298,150 @@ en la cual ya estamos-->
 ~~~
 ### Reto: Navegación
 ~~~html
+<h1>Mis libros Favoritos</h1>
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="libro1.html">Libro1</a></li>
+        <li><a href="libro2.html">Libro2</a></li>
+        <li><a href="libro3.html">Libro3</a></li>
+    </ul>
+</nav>
 
+<h2>Bienvenido a Mi Sitio</h2>
+
+<p>¡Explora mis libros favoritos haciendo clic en los enlaces de arriba!</p>
+~~~
+~~~html
+<h1>Libro 1 - Título del libro</h1>
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="libro1.html">Libro1</a></li>
+        <li><a href="libro2.html">Libro2</a></li>
+        <li><a href="libro3.html">Libro3</a></li>
+    </ul>
+</nav>
+
+<h2>Descripción del Libro 1</h2>
+
+<p>Aquí puedes encontrar información sobre el primer libro de mi lista de favoritos.</p>
+~~~
+~~~html
+<h1>Libro 2 - Título del libro</h1>
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="libro1.html">Libro1</a></li>
+        <li><a href="libro2.html">Libro2</a></li>
+        <li><a href="libro3.html">Libro3</a></li>
+    </ul>
+</nav>
+
+<h2>Descripción del Libro 2</h2>
+
+<p>Aquí puedes encontrar información sobre el segundo libro de mi lista de favoritos.</p>
+~~~
+~~~html
+<h1>Libro 3 - Título del libro</h1>
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="libro1.html">Libro1</a></li>
+        <li><a href="libro2.html">Libro2</a></li>
+        <li><a href="libro3.html">Libro3</a></li>
+    </ul>
+</nav>
+
+<h2>Descripción del Libro 3</h2>
+
+<p>Aquí puedes encontrar información sobre el tercer libro de mi lista de favoritos.</p>
 ~~~
 
 ## Imágenes
 ### Imagenes
+~~~html
+<!--Imagenes-->
+<body>
+    <!--El alt es un texto que se mostrara si no aparece la imagen
+    o servira para los que no pueden ver-->
+
+    <!--los img tienen más detalles pero tardan en cargar-->
+    <img src="assets/arches.jpeg" alt="Arches" height="100px">
+
+    <!--los svg son como imagenes con vectores-->
+    <img src="assets/html.svg" alt="HTML" height="100">
+
+    <!--Los gifts pues son gifts-->
+    <img src="assets/pi.gif" alt="PI" height="100">
+    
+</body>
+
+<!--mini reto-->
+<img src="/iceland.jpg" alt="Foto de Islandia">
+~~~
+
 ### Resolución
+~~~html
+<!--Imagenes-->
+<body>
+    <!--con srcset optimiza las imagenes dependiendo de la resolucion de pantalla-->
+    <img src="assets/arches-300.jpg" alt="Arches" height="100px" srcset="assets/arches-600.jpg 2x, assets/arches-1200.jpg 4x">
+    
+    <!--mini reto-->
+    <!--al parecer tambien puede variar el ancho de las imagenes especificando el ancho que les podemos dar-->
+    <img src='imagen1.jpg' srcset='imagen1-500w.jpg 500w, imagen1-1000w.jpg 1000w'>
+</body>
+~~~
+
 ### Figura
+~~~html
+<!--Ayuda a la semántica para los buscadores1-->
+<figure>
+  <img src="assets/html.svg" alt="HTML5" width="100" height="100" />
+  <!--Esta etiqueta le pon eun subtitulo a la imagen
+    ayuda a la semantica de los buscadores, es más facil que esta imagen 
+    sea encontrada-->
+  <figcaption>Este es el logo de HTML5</figcaption>
+</figure>
+<br />
+
+<!--mini reto-->
+<figure>
+  <img
+    src="https://cdn.britannica.com/22/221822-050-3B0A657F/British-scientist-Tim-Berners-Lee.jpg"
+    alt="Tim Berners-Lee Photo"
+  />
+  <figcaption>Tim Berners-Lee in April 2009</figcaption>
+</figure>
+~~~
+
 ### Foto
+~~~html
+<!--Optimizado para longitud y tamaño de pantalla-->
+<picture>
+  <!--aqui decimos que cuando la pantalla sea de minimo 1200px muestre la fotode 1200-->
+  <source media="(min-width:1200px)" srcset="assets/arches-1200.jpg" />
+  <!--aqui decimos que cuando la pantalla sea de minimo 600px muestre la fotode 600-->
+  <source media="(min-width:600px)" srcset="assets/arches-600.jpg" />
+  <!--aqui son todos los anchos que tenemos antes del 600px-->
+  <img src="assets/html.svg" alt="HTML5" width="600" />
+  <!--esto por lo general esta echo en css con los mediacueris
+  pero tambien se puede hacer en html-->
+</picture>
+
+<!--mini reto-->
+<picture>
+  <source srcset='imagen1-500w.jpg' media='(max-width:500px)'  />
+  <source srcset='imagen1-1000w.jpg' media='(max-width:1000px)'  />
+  <img src='imagen1-800w.jpg'/>
+</picture>
+~~~
+
 ### Reto: Imágenes
+~~~html
+
+~~~
 
 ## Multimedia
 ### Audio

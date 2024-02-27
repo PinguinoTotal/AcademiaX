@@ -1,0 +1,18 @@
+<!--Optimizado para longitud y tamaño de pantalla-->
+<picture>
+  <!--aqui decimos que cuando la pantalla sea de minimo 1200px muestre la fotode 1200-->
+  <source media="(min-width:1200px)" srcset="assets/arches-1200.jpg" />
+  <!--aqui decimos que cuando la pantalla sea de minimo 600px muestre la fotode 600-->
+  <source media="(min-width:600px)" srcset="assets/arches-600.jpg" />
+  <!--aqui son todos los anchos que tenemos antes del 600px-->
+  <img src="assets/html.svg" alt="HTML5" width="600" />
+  <!--esto por lo general esta echo en css con los mediacueris
+  pero tambien se puede hacer en html-->
+</picture>
+
+<!--mini reto-->
+<picture>
+  <source srcset='imagen1-500w.jpg' media='(max-width:500px)'  />
+  <source srcset='imagen1-1000w.jpg' media='(max-width:1000px)'  />
+  <img src='imagen1-800w.jpg'/>
+</picture>
