@@ -647,12 +647,222 @@ necesario colocar la etiqueta lang ahi dentro-->
 ## Estructura
 ### Documento
 ~~~html
-
+<!--Doctype dice que tipo de archivo es este-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Informacion no visible que el navegador necesita-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--Todo el contenido visible para los usuarios-->
+<body>
+    
+</body>
+</html>
 ~~~
 ### Cabeza
+~~~html
+<head>
+    <!--decodificacion de caracteres-->
+    <meta charset="UTF-8">
+    <!--Titulo que se mostrara en la pestaña del navegador-->
+    <title>Mi página web</title>
+    <!--Incluyendo el css en el html-->
+    <link rel="stylesheet" href="">
+    <!--cargar archivos javascript en el html-->
+    <script src="js/script.js"></script>
+    <!--linea para que se ajuste de manera correcta a la pantalla-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--dsecripcion de la pagina que nos ayuda en la busqueda de google-->
+    <meta name="description" content="Página ejemplo sorbe aprendizaje en HTML">
+    <!--en caso de que la aplciacion se comporte como una aplicacion aqui va el nombre-->
+    <meta name="aplicacion-name" content="Aplicacion de HTML">
+    <!--usar icono de pagina en windows-->
+    <meta name="msapplication-TitleImage" content="/img/mstile-144x144.png">
+    <!--usar un color especifico para el navegador-->
+    <meta name="theme-color" content="#000000">
+
+    <!--en este archivo va mucha más informacion sobre la pagina web-->
+    <link rel="manifest" href="/manifest.json">
+    <!--imagen que se ve en la pestaña-->
+    <link rel="icon" href="/favicon.ico">
+    <!--incluir los archivos de font-->
+    <link rel="preload" href="/font.woff2" as="font" type="font/woff2">
+</head>
+
+<!--mini reto-->
+<html>
+<head>
+    <title>Cursos de Programación</title>
+</head>
+</html>
+~~~
 ### Cuerpo
+~~~html
+<!--Estructura Semantica-->
+<!--este es totalmente necesario ya que si no lo ponemos el navegador lo pondra de afuerza-->
+<body>
+  <!--elementos de navegacion-->
+  <nav></nav>
+  <!--encabezado-->
+  <header>
+    <h1></h1>
+  </header>
+  <!--Contenido principal-->
+  <main>
+    <!--Articulo: Unidad de informacion-->
+    <article></article>
+    <!--Secciones de contenido-->
+    <section></section>
+    <!--Contenido de lado-->
+    <aside></aside>
+  </main>
+  <!--pie de pagina-->
+  <footer></footer>
+</body>
+
+<!--mini reto-->
+<html>
+<head>
+<title>Título de la página</title>
+</head>
+<body>
+    <h1>Encabezado</h1>
+    <p>Este es un párrafo de ejemplo.</p>
+</body>
+</html>
+~~~
 ### Tabla
+~~~html
+<table>
+    <tr>
+        <!--el nombre de la columna-->
+        <th>Tecnología Web</th>
+        <th>Función</th>
+        <th>Logo</th>
+    </tr>
+    <tr>
+        <!--una por una estas son las filas con los datos que ya teniamos antes-->
+        <td>HTML</td>
+        <td>Estructura</td>
+        <td><img src="http://www.xaviro.com/assets/img/skills/html.svg" alt="HTML5" /></td>
+    </tr>
+    <tr>
+        <td>CSS</td>
+        <td>Estilo</td>
+        <td><img src="http://www.xaviro.com/assets/img/skills/css.svg" alt="CSS" /></td>
+    </tr>
+    <tr>
+        <td>JavaScript</td>
+        <td>Interactividad</td>
+        <td><img src="http://www.xaviro.com/assets/img/skills/js.svg" alt="JavaScript" /></td>
+    </tr>
+</table>
+
+<!--mini reto-->
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Mensaje</th>
+        <th>Fecha</th>
+    </tr>
+    <tr>
+        <td>Ryan Kay</td>
+        <td>Full Stack Opportunity - Fully remote - $190,000</td>
+        <td>Jul 8</td>
+    </tr>
+    <tr>
+        <td>Amazon Care | Refer.</td>
+        <td>Referral Request-Provider List</td>
+        <td>Jun 22</td>
+    </tr>
+    <tr>
+        <td>Cameron, Xavier</td>
+        <td>Ledger partnership opportunity</td>
+        <td>Jun 22</td>
+    </tr>
+</table>
+~~~
 ### Reto: Estructura
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de HTML con Tablas</title>
+</head>
+<body>
+    <h1>Tabla de Empleados</h1>
+    
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Departamento</th>
+            <th>Salario</th>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>John Doe</td>
+            <td>Ventas</td>
+            <td>$45,000</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>Jane Smith</td>
+            <td>Recursos Humanos</td>
+            <td>$55,000</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>David Johnson</td>
+            <td>Desarrollo</td>
+            <td>$60,000</td>
+        </tr>
+        <tr>
+            <td>104</td>
+            <td>Maria Rodriguez</td>
+            <td>Marketing</td>
+            <td>$50,000</td>
+        </tr>
+    </table>
+
+    <h2>Tabla de Productos</h2>
+    <table>
+        <tr>
+            <th>Código de Producto</th>
+            <th>Nombre del Producto</th>
+            <th>Precio</th>
+        </tr>
+        <tr>
+            <td>001</td>
+            <td>Laptop HP EliteBook</td>
+            <td>$1,200</td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>iPhone 13</td>
+            <td>$799</td>
+        </tr>
+        <tr>
+            <td>003</td>
+            <td>Samsung 4K TV</td>
+            <td>$899</td>
+        </tr>
+        <tr>
+            <td>004</td>
+            <td>Nike Air Max 270</td>
+            <td>$150</td>
+        </tr>
+    </table>
+    
+</body>
+</html>
+~~~
 
 ## Formularios
 ### Entrada
