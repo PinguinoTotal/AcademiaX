@@ -562,13 +562,93 @@ siempre es mejor poner los resourses por si no se pueden cargar de manera correc
 
 ## Contenido
 ### Contenedores
+~~~html
+<!--Bloque-->
+<!--El div sirve para tener dentro los elementos
+de la pagina pero estos los pone en diferentes
+bloques en la pagina-->
+<div>Soy un div</div>
+<div>Soy un div</div>
+<div>Soy un div</div>
+
+<!--Span-->
+<!--el span es muy parecido al div, solo que este lo hace
+de manera seguida y no genera saltos de linea-->
+<span>Soy un span</span>
+<span>Soy un span</span>
+<span>Soy un span</span>
+
+<!--Valor semántico-->
+<div>Me gusta la canción <span lang="es">Elevation</span></div>
+
+<!--mini reto-->
+<div>
+    <h2>Este es un título</h2>
+    <p>Este es un párrafo</p>
+</div>
+~~~
 ### Atributos Globales
+~~~html
+<!--Id es una identificacion unica-->
+<p id="parrafo1">No hay nadie como yo</p>
+<!--Etiqueta que sirve para varias cosas y es repetible-->
+<p class="muchos">Unicos somos más</p>
+<!--Con este se puede hacer que se edite lo que hay dentrp -->
+<p contenteditable="true">Puedes editar este contenido</p>
+<!--esta etiqueta dice en que idioma esta-->
+<p lang="es">Esto está escrito en español</p>
+<!--este atributo nos pone de que lado vamos a 
+escribir en la pagina web, esto dice de donde a donde
+se escribe, como escribir en arabe que se escribe de 
+derecha a izqueirda-->
+<p dir="rtl">Esto esta escrito en no se que</p>
+
+<!--mini reto-->
+<h1 class='titulo'>Hola Mundo</h1>
+<p class='parrafo'>Este es un párrafo</p>
+~~~
 ### Accesibildiad
+~~~html
+<!--Roles ARIA para Accesibilidad - Accesibility Tree Inspector-->
+<!--Los ARIA nos sirven para dar mejor accesibildiad-->
+<div aria-label="H20">
+    <div aria-hidden="true">
+        <span>H</span>
+        <span>2</span>
+        <span>0</span>
+    </div>
+</div>
+
+<!--mini reto-->
+<img src='perro.jpg' alt='Imagen de un perro'>
+~~~
 ### Lenguaje
+~~~html
+<!--para poner el lenguaje, la etiqueta html
+envolvera toda la pagina web, por ende solo es 
+necesario colocar la etiqueta lang ahi dentro-->
+<html lang="en-US"></html>
+
+<!--mini reto-->
+<html lang="es"></html>
+~~~
 ### Reto: Contenido
+~~~html
+<h1>Ejemplo de HTML ocn Div, Span y Atributos</h1>
+<div id="contenedor" class="parrafo">
+    Este es un div cpn algunos atributos, como un ID y una clase.
+    <span>Este es un span dentro del div.</span>
+</div>
+<p lang="en">
+    This is a paragraph that is not inside the div.
+</p>
+~~~
 
 ## Estructura
 ### Documento
+~~~html
+
+~~~
 ### Cabeza
 ### Cuerpo
 ### Tabla
