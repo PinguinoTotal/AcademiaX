@@ -1286,9 +1286,3 @@ CSS
 
 ## Opiniones 
 me gustaria que despues del video te lleve a la seccion de reto, porque la primera seccion no lo sabia y me brinque los retos 
-
-----------------------------
-~~~html
-
-~~~
-
