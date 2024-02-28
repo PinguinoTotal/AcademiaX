@@ -1,0 +1,29 @@
+<!--en action va la pagina a la cual se le va a mandar
+la informacion
+el metodo post es cuando nosotros mandamos informacion
+a traves de un formulario-->
+<form action="/action.php" method="post">
+  <label for="name">Nombre:</label>
+  <input type="name" name="name" value="Xavier" />
+
+  <!--esta es otra manera de asignarle un label 
+a un input sin la necesidad de name-->
+  <label>
+    Email
+    <input name="email" type="email" required placeholder="pengu@pengu" />
+    <br>
+    <button>Iniciar Sesión</button>
+  </label>
+</form>
+
+<!--mini reto-->
+<form>
+  <label for='name'>Nombre:</label>
+  <input type='text' id='name' name='name'><br>
+  <label for='email'>Correo electrónico:</label>
+  <input type='email' id='email' name='email'><br>
+  <label for='password'>Contraseña:</label>
+  <input type='password' id='password' name='password'><br>
+  <input type='submit' value='Enviar'>
+  <input type='reset' value='Reiniciar'>
+</form>

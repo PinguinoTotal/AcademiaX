@@ -866,10 +866,162 @@ necesario colocar la etiqueta lang ahi dentro-->
 
 ## Formularios
 ### Entrada
+~~~html
+<!--Un input de tipo password, 
+en este no se veran las cosas 
+que pongamos-->
+<input type="password">
+<!--deja que s ele ponga un x para
+poder borrar lo que buscas-->
+<input type="search">
+<!--El place holder se le pon eun ejemplo
+que querramos que el usuario meta-->
+<input type="tel" placeholder="123-456-7891">
+<!--seleccionar una fecha-->
+<input type="date" name="">
+<!--seleccionar un color-->
+<input type="color" name="">
+<!--para que acepte archivos
+accept: nos dice el tipo de archivo que va 
+a aceptar
+multiple: nos dice que va a aceptar mulrtiples
+archivos-->
+<input type="file" accept="image/*" multiple>
+<!--el value es el valor que le daremos por detras
+de el codigo
+el checked es si la casilla debe iniciar chequeada 
+o no-->
+<input type="checkbox" value="El checkbox está marcado" checked>
+
+<!--mini reto-->
+<input type='text' placeholder="Ingresa tu nombre aquí">
+~~~
 ### Área de texto
+~~~html
+<!--las text areas se pueden hacer varias cosas
+con ellas, lo importante es que cols y rows
+determinan el tamaño de estas o más bien cuanta
+informacion se les puede meter dentro-->
+<textarea cols="5" rows="10"></textarea>
+
+<!--mini reto-->
+<textarea id='mensaje'>Escribe aquí tu mensaje</textarea>
+~~~
 ### Campos
+~~~html
+<!--El elemento fieldset representa un conjunto de controles de formulario agrupados, opcionalmente con un título legend.-->
+<fieldset>
+  <!--le crea una leyenda a la caja que contine
+    los checkbox-->
+  <legend>checkboxes</legend>
+  <!--El label le da sentido en el html
+    ya que no solo vemos un recuadro si no que 
+    ahora tiene un titulo
+    El name "lista" nos dice que estos forman parte
+    de un conjunto-->
+  <input id="Uno" name="lista" type="checkbox" value="Uno" />
+  <label for="Uno">Uno</label>
+  <input id="Dos" name="lista" type="checkbox" value="Dos" />
+  <label for="Dos">Dos</label>
+  <input id="Tres" name="lista" type="checkbox" value="Tres" />
+  <label for="Tres">Tres</label>
+</fieldset>
+
+<fieldset>
+  <legend>Radio</legend>
+  <!--Los radio son iguales que los checkbox solo que estos
+    solo nos permitiran escoger una opcion a la vez porque pertenece
+    al mismo name-->
+  <input id="Uno" name="lista" type="radio" value="Uno" />
+  <label for="Uno">Uno</label>
+  <input id="Dos" name="lista" type="radio" value="Dos" />
+  <label for="Dos">Dos</label>
+  <input id="Tres" name="lista" type="radio" value="Tres" />
+  <label for="Tres">Tres</label>
+</fieldset>
+
+<!--mini reto-->
+<fieldset>
+  <legend>Información de Contacto</legend>
+  <label for="email">Correo electrónico:</label>
+  <!--el required es para que este campo sea obligatorio llenarlo
+    si queremos que se mande correctamente el formulario-->
+  <input type="email" id="email" name="email" required /><br />
+  <label for="phone">Número de teléfono:</label>
+  <input type="tel" id="phone" name="phone" /><br />
+</fieldset>
+
+~~~
 ### Formularios
+~~~html
+<!--en action va la pagina a la cual se le va a mandar
+la informacion
+el metodo post es cuando nosotros mandamos informacion
+a traves de un formulario-->
+<form action="/action.php" method="post">
+  <label for="name">Nombre:</label>
+  <input type="name" name="name" value="Xavier" />
+
+  <!--esta es otra manera de asignarle un label 
+a un input sin la necesidad de name-->
+  <label>
+    Email
+    <input name="email" type="email" required placeholder="pengu@pengu" />
+    <br>
+    <button>Iniciar Sesión</button>
+  </label>
+</form>
+
+<!--mini reto-->
+<form>
+  <label for='name'>Nombre:</label>
+  <input type='text' id='name' name='name'><br>
+  <label for='email'>Correo electrónico:</label>
+  <input type='email' id='email' name='email'><br>
+  <label for='password'>Contraseña:</label>
+  <input type='password' id='password' name='password'><br>
+  <input type='submit' value='Enviar'>
+  <input type='reset' value='Reiniciar'>
+</form>
+
+~~~
 ### Reto: Formularios
+~~~html
+<h1>Formularios en HTML</h1>
+
+<form action="" method="post">
+  <h2>Datos Personales</h2>
+
+  <label for="name">Nombre</label>
+  <input type="text" name="name" id="name" /><br />
+  <label for="email">Correo Electrónico</label>
+  <input type="email" name="email" id="email" /><br />
+  <label for="Phone">Teléfono</label>
+  <input type="tel" name="Phone" id="Phone" /><br />
+
+  <h2>Género</h2>
+
+  <input type="radio" name="gender" value="masculino" />
+  <label for="masculino">Masculino</label><br />
+  <input type="radio" name="gender" value="femenino" />
+  <label for="femenino">Femenino</label><br />
+  <input type="radio" name="gender" value="otro" />
+  <label for="otro">Otro</label><br />
+
+  <h2>Preferencias</h2>
+
+  <input type="checkbox" name="preferences" value="music" />
+  <label for="music">Música</label><br />
+  <input type="checkbox" name="preferences" value="sports" />
+  <label for="sports">Deportes</label><br />
+  <input type="checkbox" name="preferences" value="lecture" />
+  <label for="lecture">Lectura</label><br />
+
+  <h2>Comentarios</h2>
+  <textarea cols="70" rows="5"></textarea><br/>
+  <input type="submit" value="Enviar">
+</form>
+~~~
 
 ## Complementos
 ### Depuracion

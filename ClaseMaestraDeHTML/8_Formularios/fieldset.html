@@ -1,0 +1,41 @@
+<!--El elemento fieldset representa un conjunto de controles de formulario agrupados, opcionalmente con un título legend.-->
+<fieldset>
+  <!--le crea una leyenda a la caja que contine
+    los checkbox-->
+  <legend>checkboxes</legend>
+  <!--El label le da sentido en el html
+    ya que no solo vemos un recuadro si no que 
+    ahora tiene un titulo
+    El name "lista" nos dice que estos forman parte
+    de un conjunto-->
+  <input id="Uno" name="lista" type="checkbox" value="Uno" />
+  <label for="Uno">Uno</label>
+  <input id="Dos" name="lista" type="checkbox" value="Dos" />
+  <label for="Dos">Dos</label>
+  <input id="Tres" name="lista" type="checkbox" value="Tres" />
+  <label for="Tres">Tres</label>
+</fieldset>
+
+<fieldset>
+  <legend>Radio</legend>
+  <!--Los radio son iguales que los checkbox solo que estos
+    solo nos permitiran escoger una opcion a la vez porque pertenece
+    al mismo name-->
+  <input id="Uno" name="lista" type="radio" value="Uno" />
+  <label for="Uno">Uno</label>
+  <input id="Dos" name="lista" type="radio" value="Dos" />
+  <label for="Dos">Dos</label>
+  <input id="Tres" name="lista" type="radio" value="Tres" />
+  <label for="Tres">Tres</label>
+</fieldset>
+
+<!--mini reto-->
+<fieldset>
+  <legend>Información de Contacto</legend>
+  <label for="email">Correo electrónico:</label>
+  <!--el required es para que este campo sea obligatorio llenarlo
+    si queremos que se mande correctamente el formulario-->
+  <input type="email" id="email" name="email" required /><br />
+  <label for="phone">Número de teléfono:</label>
+  <input type="tel" id="phone" name="phone" /><br />
+</fieldset>
