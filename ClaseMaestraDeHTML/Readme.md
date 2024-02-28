@@ -1025,26 +1025,264 @@ a un input sin la necesidad de name-->
 
 ## Complementos
 ### Depuracion
+~~~html
+<ol>
+    <!--Simpre que se encuentren errores en el html va al inspector del 
+    navegador y lo más probable es que se vea el error que estas teniendo-->
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript
+    <li>
+        <!--HTML siempre va a intentar reparar el codigo que le des aunque
+        este este roto-->
+</ol>
+
+<!--mini reto-->
+<form>
+    <label for='name'>Nombre:</label>
+    <input type='text' id='name' name='name'><br>
+    <label for='email'>Correo electrónico:</label>
+    <input type='email' id='email' name='email'><br>
+    <label for='password'>Contraseña:</label>
+    <input type='password' id='password' name='password'><br>
+    <input type='submit' value='Enviar'>
+  </form>
+~~~
 
 ## Proyecto: Portafolio
 ### Portafolio: Analisis de Diseño
+En esta seccion se hace una simulacion de como detectar los diferenetes tipos de html que podemos encontrar en la pagin aweb, asi que solo es un video, pero se puede decir que es importante encontrar un editor de imagenes para sacar las diferentes partes de la pagina
 ### Portafolio: Iplementacion de HTML
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abraham Castillo Galant | portafolio</title>
+</head>
+<body>
+    <header>
+        <img class="circule" src="assets/img/logos/large.png" alt="logo grande">
+        <h1>Abraham Castillo Galant</h1>
+        <hr>
+        <h2>Software Engineer</h2>
+        <video autoplay loop muted>
+            <source src="assets/video/hero.mp4">
+        </video>
+    </header>
+
+    <nav id="navbar" class="oppen">
+        <div>
+            <a href="/">
+                <img src="assets/img/logos/small.png" alt="logo pequeño">
+                <span>Abraham Castillo Galant <small>software Enegnieer</small></span>
+            </a>
+            <button id="hamburger">☰</button>
+        </div>
+        <ul>
+            <li><a href="#Porfolio">Portfolio</a></li>
+            <li><a href="#Skillset">Skillset</a></li>
+            <li><a href="#Experience">Experience</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="Porfolio">
+            <h3>PORTFOLIO</h3>
+            <hr>
+            <div>
+                <button>
+                    <img src="assets/img/portfolio/1.png" alt="">
+                    <h4>Fleet Management System</h4>
+                </button>
+                <button>
+                    <img src="assets/img/portfolio/2.png" alt="">
+                    <h4>Nintendo Disney Art Academy</h4>
+                </button>
+                <button>
+                    <img src="assets/img/portfolio/3.png" alt="">
+                    <h4>Fridge Binge Games</h4>
+                </button>
+            </div>
+        </section>
+        <section id="Skillset" class="even">
+            <h3>SKILLSET</h3>
+            <hr>
+            <div>
+                <div>
+                    <img src="assets/img/skillset/html.svg" alt="html">
+                    <span class="tooltip">HTML</span>
+                </div>
+                <div>
+                    <img src="assets/img/skillset/css3.svg" alt="CSS">
+                    <span class="tooltip">CSS</span>
+                </div>
+                <div>
+                    <img src="assets/img/skillset/javascript.svg" alt="JS">
+                    <span class="tooltip">JavaScript</span>
+                </div>
+                <div>
+                    <img src="assets/img/skillset/visual-studio-team-services-git-repository.svg" alt="git">
+                    <span class="tooltip">git</span>
+                </div>
+                <div>
+                    <img src="assets/img/skillset/npm.svg" alt="npm">
+                    <span class="tooltip">npm</span>
+                </div>
+                <div>
+                    <img src="assets/img/skillset/bash.svg" alt="bash">
+                    <span class="tooltip">BASH</span>
+                </div>
+                <div>
+                    <img src="assets/img/skillset/nodejs.svg" alt="node">
+                    <span class="tooltip">NODE</span>
+                </div>
+                <div>
+                    <img src="assets/img/skillset/react.svg" alt="react">
+                    <span class="tooltip">REACT</span>
+                </div>
+            </div>
+        </section>
+        <section id="Experience">
+            <h3>EXPERIENCE</h3>
+            <hr>
+            <div>
+                <a href="#">
+                    <img src="assets/img/experience/1.svg" alt="">
+                    <h4>Nintendo @ Enter the studio</h4>
+                </a>
+                <a href="#">
+                    <img src="assets/img/experience/2.svg" alt="">
+                    <h4>Google Maps @ Randstad</h4>
+                </a>
+                <a href="#">
+                    <img src="assets/img/experience/3.svg" alt="">
+                    <h4>Fresh Consulting LLC</h4>
+                </a>
+                <a href="#">
+                    <img src="assets/img/experience/4.svg" alt="">
+                    <h4>Amazon LLC</h4>
+                </a>
+            </div>
+        </section>
+        <section id="Contact">
+            <h3>CONTACT</h3>
+            <hr>
+            <form action="post">
+                <label for="email">Your email:</label>
+                <input type="email" name="emial" id="">
+                <label for="message">Your message:</label>
+                <textarea name="message"></textarea>
+                <input type="submit" value="Send">
+            </form>
+            <nav id="social-media">
+                <a href="#">
+                    <img src="assets/img/social/linkedin.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="assets/img/social/github.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="assets/img/social/youtube.png" alt="">
+                </a>
+            </nav>
+        </section>
+    </main>
+    <footer><small>Developed and designed by Xavier Reyes &copy;Ochoa. All rights reserved.  </small></footer>
+</body>
+</html>
+~~~
 
 ## Productividad
 ### HTML con ChatGPT
+crea solo el código de html de como implementar un acordeón (no crees css ni javascript)
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acordeón</title>
+</head>
+<body>
+
+<div class="accordion">
+  <div class="accordion-item">
+    <div class="accordion-heading">Título 1</div>
+    <div class="accordion-content">
+      Contenido del panel 1
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-heading">Título 2</div>
+    <div class="accordion-content">
+      Contenido del panel 2
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-heading">Título 3</div>
+    <div class="accordion-content">
+      Contenido del panel 3
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+~~~
+Este código proporciona la estructura básica de un acordeón con tres paneles. Cada panel consta de un encabezado (accordion-heading) y un contenido (accordion-content). Sin embargo, para que funcione como un acordeón interactivo, necesitarás agregar estilos CSS y funcionalidad JavaScript adicionales.
+
+
 ### HTML con VSCode
+con **crt+espacio** se abre una ventana de sugerencias que nos da vscode
 ### Sintaxis de Emmet
+como usar emmet que es una manera más rapida de escribir html
 ### Abreviaciones de Emmet
+viendo las abreviaciones que tienbe emmet
 
 ## Protecto: Calculadora
 ### Calculadora: Analisis de diseño
+el html se lee de derecha a izquierda y de arriba hacia abajo
 ### Calculadora: Implementacion de HTML
+~~~html
+<div id="calulator">
+    <div id="top">
+        <div id="circles">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div id="display">
+            <h1>0</h1>
+        </div>
+        <div id="buttons">
+            <button id="reset" class="dark">AC</button>
+            <button id="negative" class="dark">+/-</button>
+            <button id="percentage" class="dark">%</button>
+            <button class="symbol orange">÷</button>
+            <button class="number gray">7</button>
+            <button class="number gray">8</button>
+            <button class="number gray">9</button>
+            <button class="symbol orange">X</button>
+            <button class="number gray">4</button>
+            <button class="number gray">5</button>
+            <button class="number gray">6</button>
+            <button class="symbol orange">-</button>
+            <button class="number gray">1</button>
+            <button class="number gray">2</button>
+            <button class="number gray">3</button>
+            <button class="symbol orange">+</button>
+            <button class="number gray">0</button>
+            <button id="dot" class="gray">.</button>
+            <button id="equal" class="orange">=</button>
+        </div>
+    </div>
+~~~
 
 ## Siguientes pasos
-### Recursos
-### Evaluacion de HTML
 ### ¿Que viene despúes?
-### Preguntas de entrevista
+CSS
 
 ## Opiniones 
 me gustaria que despues del video te lleve a la seccion de reto, porque la primera seccion no lo sabia y me brinque los retos 
