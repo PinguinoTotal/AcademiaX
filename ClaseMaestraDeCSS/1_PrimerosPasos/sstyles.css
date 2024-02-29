@@ -1,0 +1,12 @@
+/*Selector*/
+p{
+    /*La linea completa se llama declaracion*/
+    /*Color es la propiedad
+    y red es el valor*/
+    color: red;
+}
+
+/*Mini reto*/
+h1{
+    color: red;
+}

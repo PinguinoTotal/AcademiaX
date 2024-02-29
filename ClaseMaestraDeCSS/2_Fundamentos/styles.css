@@ -1,0 +1,33 @@
+p.textos#texto1{
+    /*Esto es mucho más especifoco, ya que buscamos un parrafo 
+    con clase textos con un id texto1*/
+    color: blue !important;
+    /*se puede poner el importantan pero no es tan buena practica
+    ya que puede ocacionar conflictos*/
+}
+#texto1{
+    /*el id es más especifico que la clase por ende 
+    le gana*/
+    color: yellow;
+}
+.textos { 
+    /*la clase textos es más especifica que el p
+    por ende le gana al p*/
+    color: orange;
+}
+p{
+    /*p es el hijo de body por ende gana al
+    ser más especifico*/
+    color: red;
+}
+body {
+    /*le ponemos el color purpura a todos
+    los elementos del body*/
+    color: purple;
+    font-size: 25px;
+}
+
+/*Mini reto*/
+#span-id{
+    color: black;
+}
