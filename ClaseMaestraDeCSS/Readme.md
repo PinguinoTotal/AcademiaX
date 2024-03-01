@@ -256,12 +256,219 @@ a{
 
 ## Texto
 ### Fuentes
+~~~css
+p{
+        /*si noi encuentro esta fuente biscare la que sigue
+        y asi sucesivamente*/
+        font-family: Arial, Helvetica, sans-serif;
+        /*que tan gruesa es la letra*/
+        font-weight: 700;
+        /*y el style pues es el formato de la letra*/
+        font-style: italic;
+        /*Tmaño de la fuente*/
+        font-size: 20px;
+
+        
+      }
+      /*Mini reto*/
+      p{
+      font-family: TwitterChirp;
+~~~
+
 ### Transformar
+~~~html
+<style>
+  div{
+    /*texto en mayusculas: uppercase*/
+    /*texto en minusculas: lowercase*/
+    /*primeras letras en mayusculas: capitalize*/
+    text-transform: capitalize;
+  }
+</style>
+<div>Texto en mayusculas</div>
+~~~
 ### Espaciamiento
+~~~html
+<style>
+  /*Esta liena hace que preserve lso espacios que le damos en 
+  html a la clase que se lo apliquemos*/
+  .preserve{
+    white-space: pre;
+    /*Este es que se vea normal comosiempre */
+    white-space: normal;
+    /*Hacer que el texto no se rompa uanque la pagina cambie de tamaño*/
+    white-space: nowrap;
+  }
+
+  .romper{
+    /*Esto hace que el navegador rompa la palabra y la acomode 
+    aunque no tenga espacios*/
+    word-wrap: break-word;
+  }
+</style>
+<p class="preserve">
+  Este texto no se rompe y tampoco hace saltos de linea
+</p>
+<p class="romper">
+  Palabraslargasquetendriaquedividirenlineas,
+</p>
+~~~
 ### Envoltura
+~~~html
+<style>
+  p{
+    /*Esto hace que la pagina no haga pequeño el parrafo aunque 
+    la ventana cambie de tamaño*/
+    text-wrap: nowrap;
+    /*white spaces se enfoca en los saltos de linea*/
+
+    /*css hace que se balanceen las lineas, osease que si hay 2 lineas
+    estas sean del mismo largo de letras*/
+    text-wrap: balance;
+
+    /*asegura que haya al menos dos palabras cuando se corte la 
+    pagina*/
+    text-wrap: pretty;
+    
+  }
+</style>
+<p>Domina la ingenieria de software en 6 
+  mese y asegura tu empleo en tech. </p>
+~~~
 ### Alineamiento
+~~~html
+<style>
+  span{
+    /*Espaciado entre las letras*/
+    letter-spacing: 2px;
+    /*espaciado entre palabras*/
+    word-spacing: 10px;
+  }
+  .justificado-izquierda{
+    /*justifica a la izquierda*/
+    text-align: left;
+    /*justifica a la derecha*/
+    text-align: right;
+    /*justifica al centro*/
+    text-align: center;
+    /*texto justificado*/
+    text-align: justify;
+
+  }
+</style>
+<span>Espaciado entre las letras aumentado</span>
+<div class="justificado-izquierda">Texto justificado a la izquierda</div>
+~~~
 ### Efectos
+~~~html
+<style>
+  div{
+    /*vertical horizontal borroso color*/
+    text-shadow: 2px 3px 4px;
+    /*texto subrayado*/
+    text-decoration: line-through;
+    /*texto con linea arriba*/
+    text-decoration: overline;
+  }
+  a{
+    text-decoration: none;
+  }
+</style>
+<div>Texto con sombra.</div>
+<a href="#">Enlace</a>
+~~~
 ### Reto: Texto
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="Reto_Texto.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+  </head>
+  <body>
+    <header>
+      <h1>Bienvenido a Nuestra Landing Page</h1>
+    </header>
+
+    <main>
+      <section id="productos">
+        <h2>Descubre Nuestros Productos</h2>
+        <p>
+          Descubre nuestros productos de alta calidad que te ayudarán a alcanzar
+          tus metas. Nuestra misión es proporcionarte soluciones excepcionales
+          que marcan la diferencia.
+        </p>
+      </section>
+
+      <section id="Comunidad">
+        <h2>Únete a Nuestra Comunidad</h2>
+        <p>
+          Únete a una comunidad apasionada que comparte intereses. Encuentra 
+          nuevas amistades, aprende cosas nuevas y comprate tus experiencias.
+        </p>
+      </section>
+
+      <section id="Contacto">
+        <h2>Contacto</h2>
+        <p>
+          ¿Tienes alguna pregunta? Np dudes en <a href="#">contactarnos</a>. Estamos aquí para ayudarte.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Mi Landing Page Completa</p>
+    </footer>
+  </body>
+</html>
+
+~~~
+~~~css
+*{
+  margin: 0px;
+  padding: 0px;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header{
+  height: 130px;
+  background-color: #8B1818;
+  color: white;
+  text-align: center;
+  line-height: 130px;
+}
+h1{
+  font-size: 50px;
+}
+main{
+  margin-top: 50px;
+}
+section{
+  margin: 0px auto;
+  width: 90%;
+}
+p{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+a{
+  color: #0077CC;
+}
+footer{
+  height: 50px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 50px;
+}
+footer p{
+  font-size: 20px;
+  font-style: oblique;
+}
+~~~
 
 ## Modelo de caja
 ### Caja

@@ -1,0 +1,23 @@
+<style>
+  /*Esta liena hace que preserve lso espacios que le damos en 
+  html a la clase que se lo apliquemos*/
+  .preserve{
+    white-space: pre;
+    /*Este es que se vea normal comosiempre */
+    white-space: normal;
+    /*Hacer que el texto no se rompa uanque la pagina cambie de tamaño*/
+    white-space: nowrap;
+  }
+
+  .romper{
+    /*Esto hace que el navegador rompa la palabra y la acomode 
+    aunque no tenga espacios*/
+    word-wrap: break-word;
+  }
+</style>
+<p class="preserve">
+  Este texto no se rompe y tampoco hace saltos de linea
+</p>
+<p class="romper">
+  Palabraslargasquetendriaquedividirenlineas,
+</p>
