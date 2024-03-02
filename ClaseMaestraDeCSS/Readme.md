@@ -472,10 +472,284 @@ footer p{
 
 ## Modelo de caja
 ### Caja
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body{
+      /*el body por lo general ya trae ciertas cosas configuradas
+      por ende podriamos borrarlas*/
+      margin: 0;
+    }
+    /*el span no ocupa todo el espacio ya quw este se dedica
+    a ser usado en linea por ende no llena toda la "caja"*/
+    span{
+      background-color: red;
+    }
+    div{
+      background-color: red;
+      /*margen interno*/
+      padding: 10px;
+      /*Bordes*/
+      border: 10px solid blue;
+      /*margenes, espacio más haya de la caja */
+      margin: 20px;
+      /*ancho*/
+      width: 100px;
+      /*alto*/
+      height: 100px;
+      /*content-box: la caja va a tener el tamaño del contenido
+      border-box: considera al borde y al padding*/
+      box-sizing: content-box;
+    }
+
+    /*mini reto*/
+    div {
+	width: 200px;
+    height: 150px;
+    border: 1px solid blue;
+    margin: 20px;
+    padding: 10px; 
+    background-color: yellow;
+}
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div>BOX MODEL</di>
+</body>
+</html>
+~~~
 ### Margen y relleno
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        margin: 0;
+      }
+      div,
+      span {
+        background-color: red;
+        /*el padding se aplica arriba, derecha, abajo, izquierda
+      pero si solo pusieramos 3 seria arriba, derechaizquierda, abajo
+      con dos valores es: arribaAbajo y IzquierdaDerecha
+      y de uno es arribaAbajoIzqueirdaDerecha*/
+        padding: 10px 20px 30px 40px;
+        /*los span se comportan como en linea por ende no ocupal
+      todo el espacio*/
+        /*y el margin se comporta como el padding, pero de afuera*/
+        margin: 10px;
+        display: inline-table;
+      }
+
+      /*Mini reto*/
+      .caja-azul {
+        background-color: lightblue;
+        width: 100px;
+        height: 100px;
+      }
+      .caja-roja {
+        background-color: lightcoral;
+        width: 100px;
+        height: 100px;
+        margin-left: 16px;
+        padding-top: 16px;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--<div>BOX MODEL</div>-->
+    <!--Al estar en linea se mantienen en linea al recortar la pagina
+  y no ocupan todo el espacio como lo haria un div-->
+    <span>SPAN MODEL</span>
+    <span>SPAN MODEL</span>
+    <span>SPAN MODEL</span>
+    <span>SPAN MODEL</span>
+  </body>
+</html>
+
+~~~
 ### Borde
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        margin: 0;
+      }
+      span {
+        display: inline-block;
+        padding: 20px;
+        /*tipo de borde, tamaño del borde y color*/
+        border: groove 15px red;
+        /*dotted: puntitos
+        solid: solido
+        double: borde doble
+        ridge: borde en 3d
+        groove: borde en 3d pero luz de otro lado
+        inset
+        outset
+      */
+      }
+
+      /*mini reto*/
+      div {
+        border: 4px dashed blue;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span>BOX MODEL</span>
+  </body>
+</html>
+
+~~~
 ### Contorno
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        margin: 0;
+      }
+      span {
+        display: inline-block;
+        padding: 20px;
+        /*el otline es parecido al border, solo que este no genera una 
+      parte de una caja que recorre el elemento para que se vea
+      por lo general se utiliza para las personas que navegan con tabs
+      y quieren ver donde se encuentra su cursor*/
+        outline: solid 20px red;
+
+        margin: 20px;
+      }
+
+      /*mini reto*/
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        outline: 2px solid blue;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span>BOX MODEL</span>
+  </body>
+</html>
+
+~~~
 ### Reto: Modelo de Caja
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Landing Page de Productos de Comida</title>
+</head>
+<body>
+  <header>
+    <h1>Bienvenido a Nuestro Landing <br><span class="underline">Page de Comida</span></h1>
+  </header>
+  <div id="container">
+    <div class="product">
+      <img src="https://th.bing.com/th/id/OIP.HM-q3ReNk-W4xCy523GJfQHaE5?pid=ImgDet&rs=1" alt="">
+      <h2>Producto 1</h2>
+      <p>
+        Descripción del producto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <a href="">Ver más</a>
+    </div>
+
+    <div class="product">
+      <img src="https://th.bing.com/th/id/OIP.HM-q3ReNk-W4xCy523GJfQHaE5?pid=ImgDet&rs=1" alt="">
+      <h2>Producto 2</h2>
+      <p>
+        Descripción del producto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <a href="">Ver más</a>
+    </div>
+  </div>
+  <footer>
+    &copy; 2023 Landing Page de Productos de Comida
+  </footer>
+</body>
+</html>
+~~~
+~~~css
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #FF3300;
+  padding: 0;
+}
+header{
+  color: white;
+  text-align: center;
+  margin: 0px auto;
+  padding: 20px 0;
+}
+
+h1{
+  border-bottom: 4px solid white;
+  padding-bottom: 5px;
+  width: 30%;
+  margin: auto;
+}
+
+#container{
+  padding: 20px;
+  width: 95%;
+  margin: 0px auto;
+  background-color: #FFFFFF;
+  
+}
+
+.product{
+  background-color: #F5F5F5;
+  margin: 0px auto;
+  border: 1px solid #D9D9D9;
+  width: 90%;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+h2{
+  color: #FF6700;
+}
+a{
+  text-decoration: none;
+  color: #5098D6;
+}
+img{
+  height: 150px;
+  width: 270px;
+}
+footer{
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+}
+~~~
 
 ## Estilos
 ### Fondo

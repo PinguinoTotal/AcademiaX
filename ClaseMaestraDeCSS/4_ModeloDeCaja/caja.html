@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body{
+      /*el body por lo general ya trae ciertas cosas configuradas
+      por ende podriamos borrarlas*/
+      margin: 0;
+    }
+    /*el span no ocupa todo el espacio ya quw este se dedica
+    a ser usado en linea por ende no llena toda la "caja"*/
+    span{
+      background-color: red;
+    }
+    div{
+      background-color: red;
+      /*margen interno*/
+      padding: 10px;
+      /*Bordes*/
+      border: 10px solid blue;
+      /*margenes, espacio más haya de la caja */
+      margin: 20px;
+      /*ancho*/
+      width: 100px;
+      /*alto*/
+      height: 100px;
+      /*content-box: la caja va a tener el tamaño del contenido
+      border-box: considera al borde y al padding*/
+      box-sizing: content-box;
+    }
+
+    /*mini reto*/
+    div {
+	width: 200px;
+    height: 150px;
+    border: 1px solid blue;
+    margin: 20px;
+    padding: 10px; 
+    background-color: yellow;
+}
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div>BOX MODEL</di>
+</body>
+</html>

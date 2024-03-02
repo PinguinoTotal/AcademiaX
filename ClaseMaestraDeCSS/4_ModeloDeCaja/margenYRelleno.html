@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        margin: 0;
+      }
+      div,
+      span {
+        background-color: red;
+        /*el padding se aplica arriba, derecha, abajo, izquierda
+      pero si solo pusieramos 3 seria arriba, derechaizquierda, abajo
+      con dos valores es: arribaAbajo y IzquierdaDerecha
+      y de uno es arribaAbajoIzqueirdaDerecha*/
+        padding: 10px 20px 30px 40px;
+        /*los span se comportan como en linea por ende no ocupal
+      todo el espacio*/
+        /*y el margin se comporta como el padding, pero de afuera*/
+        margin: 10px;
+        display: inline-table;
+      }
+
+      /*Mini reto*/
+      .caja-azul {
+        background-color: lightblue;
+        width: 100px;
+        height: 100px;
+      }
+      .caja-roja {
+        background-color: lightcoral;
+        width: 100px;
+        height: 100px;
+        margin-left: 16px;
+        padding-top: 16px;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--<div>BOX MODEL</div>-->
+    <!--Al estar en linea se mantienen en linea al recortar la pagina
+  y no ocupan todo el espacio como lo haria un div-->
+    <span>SPAN MODEL</span>
+    <span>SPAN MODEL</span>
+    <span>SPAN MODEL</span>
+    <span>SPAN MODEL</span>
+  </body>
+</html>
