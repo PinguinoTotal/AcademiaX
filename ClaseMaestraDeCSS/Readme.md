@@ -753,11 +753,211 @@ footer{
 
 ## Estilos
 ### Fondo
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        margin: 0;
+        /*background-color: red;*/
+        /*los colores pueden ser expresados en html o en 
+      rgb*/
+        /*rojo verde azul*/
+        /*background-color: rgb(red, green, blue);*/
+        /*gradiente lineal*/
+        background: linear-gradient(blue, red);
+        /*con esto se hacen muchas lineas con el gradiente*/
+        /*hacer que el gradiente no se repita por toda la 
+      pagina*/
+        background-repeat: no-repeat;
+        /*apra usar imagenes como backgroubds se le da un url 
+      con la direccion de la imagen*/
+        background-image: url(https://www.xaviro.com/assets/2c07c8f61822f4d3a53b.svg);
+      }
+
+      /*mini reto*/
+      div {
+        width: 100%;
+        height: 200px;
+        background: linear-gradient(to bottom, #000, #fff);
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>BackGround</div>
+  </body>
+</html>
+
+~~~
 ### Color
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      h1 {
+        color: red;
+        /*color rojo pero con el sistema hexadecimal
+      el hexadecimal los priemros valores son para el rojo
+      luego el verde y al final el azul*/
+        color: #ff0000;
+        color: #03fa45;
+        background-color: green;
+        /*y tambien se puede usar el rgb como siempre con un 
+      valor maximo de 255*/
+        border: solid 10px blue;
+        /*nivel de trabsparencia de 0 a 1*/
+        opacity: 1;
+      }
+
+      /*mini reto*/
+      body {
+        background-color: rgba(255, 0, 0, 0.5);
+        color: #1a1a2e;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>color</h1>
+  </body>
+</html>
+
+~~~
 ### Modelos
+~~~html
+<style>
+  div{
+    background-color: #f00;
+    /*rgba nos da un valor de transparencia*/
+    background-color: rgba(2500, 0, 0, 0.5);
+    /*hcl Hue Saturacion Light*/
+    background-color: hsl(0%, 100%, 0%);
+    /*lab este nos sirve para darle precision a los colores*/
+    /*porcentaje de luminosidad, todos los valores entre el verde y el rojo
+    colores entre el azul y el amarillo*/
+    background-color: lab(50% -125 125);
+    /*LCH Lightness Chroma Hue
+    porcentaje de luminocidad,croma y hue*/
+    background-color: lch(40% 100 0);
+  }
+</style>
+<div>COLOR</div>
+~~~
 ### Mezcla
+~~~html
+<style>
+  div{
+    background-color: color-mix(in srgb, red 50%, blue 50%);
+  }
+</style>
+<div>Mezcla</div>
+~~~
 ### Colores relativos
+~~~html
+<style>
+  :root{
+    --principal: blue
+  }
+  div{
+    background-color: var(--principal);
+  }
+</style>
+<div>Colores Relativos</div>
+~~~
 ### Reto: Estilos
+~~~html
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+      header {
+        background-image: url("https://btlive.tv/wp-content/uploads/2020/11/171115171-1140x474.jpg");
+        height: 80px;
+        /*centrar imagen*/
+        background-position: center;
+        background-repeat: no-repeat;
+        /*cubre todo el espacio que tiene con la imagen */
+        background-size: cover;
+        color: white;
+        text-align: center;
+        padding: 50px;
+      }
+      body{
+        background: linear-gradient(to bottom, #2980b9, #6dd5fa);
+      }
+      main {
+        padding-top: 67px;
+        padding-bottom: 50px;
+      }
+      #container{
+        width: 80%;
+        margin: 0px auto;
+        text-align: center;
+        
+      }
+      img{
+        height: 200px;
+        margin-bottom: 20px;
+      }
+      p{
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      a{
+        margin-top: 20px;
+        color: white;
+        text-decoration: none;
+      }
+      footer{
+        height: 60px;
+        background-color: #203F4A;
+        color: white;
+        text-align: center;
+        line-height: 60px;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deportes</title>
+  </head>
+  <body>
+    <header>
+      <h1>Landing Page de Deportes</h1>
+      <p>¡Encuentra todo lo que necesitas para mantenerte activo!</p>
+    </header>
+    <main>
+      <div id="container">
+        <img
+          src="https://th.bing.com/th/id/OIP.KsBDSX5McKjZJpADdH9vLgHaEz?pid=ImgDet&rs=1"
+          alt="imagen de niños jugando"
+        />
+        <h2>Deporte 1</h2>
+        <p>
+          Descripción del deporte. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit.
+        </p>
+        <a href="#">Ver más</a>
+      </div>
+    </main>
+
+    <footer>&copy; 2023 Landing Page de Deportes</footer>
+  </body>
+</html>
+
+~~~
 
 ## Disposicion
 ### Diseños
