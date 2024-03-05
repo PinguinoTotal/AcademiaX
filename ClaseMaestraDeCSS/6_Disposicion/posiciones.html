@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      div {
+        /*cuando se ponene elementos de tipo bloque
+      en el html se alinean uno sobre otro*/
+        /*los elementos en linea no tienen ningun tipo
+      de altura o ancho*/
+        /*los inline-block haven que los elementos se 
+      comporten como bloques pero a la vez se alinen
+      uno de tras de otro*/
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        background-color: red;
+      }
+
+      #primero {
+        /*esto hace que los elementos se comporten de manera
+      por de fault*/
+        position: static;
+        /*la posicion relativa nos dice que seguira el flujo de
+      la pagina, como normalmente pero tendra ciertos offsets
+      que no se le van a quitar*/
+        position: relative;
+        /*como que sigue utilizando el mismo espacio inicial
+      del documento pero con offsets*/
+        /*10 pixeles relativo a la parte superior*/
+        top: 10px;
+        left: 50px;
+        position: absolute;
+        /*en la posicion absoluta hacemos que no importa lo que
+      pase con la paguina solo el bloque estara sobre todo*/
+        /*la nueva posicion que se le da no es relativa al 
+      elemento si no que es relativa al documento en el que
+      se encuentra*/
+        /*esta es la capa en la cual se va a renderizar lo que 
+      le digaos*/
+        z-index: 2;
+        position: fixed;
+        /*esto esta ubicado relativo al navegador, si bajamos
+      en el navegador haremos que la caja nos siga por toda
+      la pantalla*/
+      }
+
+      /*mini reto*/
+      nav {
+        position: fixed;
+        top: 0;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posiciones</title>
+  </head>
+  <body>
+    <div id="primero" style="background-color: rgb(88, 228, 209)"></div>
+    <div style="background-color: rgb(187, 255, 0)"></div>
+    <div style="background-color: rgb(0, 132, 255)"></div>
+    <div style="background-color: rgb(119, 0, 255)"></div>
+    <div style="background-color: rgb(225, 0, 64)"></div>
+  </body>
+</html>

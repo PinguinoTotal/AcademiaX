@@ -961,11 +961,547 @@ footer{
 
 ## Disposicion
 ### Diseños
+si se van a utilizar layauts lo mejor es utilizar css grids y flexboxs
+~~~css
+/*mini reto*/
+.contenedor {
+	display: flex;
+}
+
+.izquierda {
+	width: 30%;
+}
+
+.derecha {
+	width: 70%;
+}
+~~~
 ### Posiciones
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      div {
+        /*cuando se ponene elementos de tipo bloque
+      en el html se alinean uno sobre otro*/
+        /*los elementos en linea no tienen ningun tipo
+      de altura o ancho*/
+        /*los inline-block haven que los elementos se 
+      comporten como bloques pero a la vez se alinen
+      uno de tras de otro*/
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        background-color: red;
+      }
+
+      #primero {
+        /*esto hace que los elementos se comporten de manera
+      por de fault*/
+        position: static;
+        /*la posicion relativa nos dice que seguira el flujo de
+      la pagina, como normalmente pero tendra ciertos offsets
+      que no se le van a quitar*/
+        position: relative;
+        /*como que sigue utilizando el mismo espacio inicial
+      del documento pero con offsets*/
+        /*10 pixeles relativo a la parte superior*/
+        top: 10px;
+        left: 50px;
+        position: absolute;
+        /*en la posicion absoluta hacemos que no importa lo que
+      pase con la paguina solo el bloque estara sobre todo*/
+        /*la nueva posicion que se le da no es relativa al 
+      elemento si no que es relativa al documento en el que
+      se encuentra*/
+        /*esta es la capa en la cual se va a renderizar lo que 
+      le digaos*/
+        z-index: 2;
+        position: fixed;
+        /*esto esta ubicado relativo al navegador, si bajamos
+      en el navegador haremos que la caja nos siga por toda
+      la pantalla*/
+      }
+
+      /*mini reto*/
+      nav {
+        position: fixed;
+        top: 0;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posiciones</title>
+  </head>
+  <body>
+    <div id="primero" style="background-color: rgb(88, 228, 209)"></div>
+    <div style="background-color: rgb(187, 255, 0)"></div>
+    <div style="background-color: rgb(0, 132, 255)"></div>
+    <div style="background-color: rgb(119, 0, 255)"></div>
+    <div style="background-color: rgb(225, 0, 64)"></div>
+  </body>
+</html>
+
+~~~
 ### Flotados
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      div {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+      }
+
+      #primero {
+        /*los flotados nos dicen que los elementos flotaran
+        y los demas elementos lo rodearan*/
+        float: left;
+      }
+
+      #segundo {
+        /*en esto el texto emvuelve a las cajas que ya estaban 
+        flotadas*/
+        float: right;
+      }
+      p {
+        text-align: justify;
+        /*clear both nos dice que ignore a los elementos flotados
+        que los anteceden */
+        clear: both;
+      }
+
+      /*mini reto*/
+      div {
+        height: 100px;
+      }
+
+      div.columna-izquierda {
+        width: 200px;
+        float: left;
+        background-color: #ccc;
+        margin-right: 20px;
+      }
+
+      div.columna-derecha {
+        /*esto hace que abarque todo lo que sobra de la 
+        pantalla si tiene elementos flotados en la misma
+        linea*/
+        overflow: hidden;
+        background-color: #eee;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flotados</title>
+  </head>
+  <body>
+    <div id="primero" style="background-color: rgb(88, 228, 209)"></div>
+    <div id="segundo" style="background-color: rgb(187, 255, 0)"></div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper
+      dolor non libero luctus pellentesque. Vestibulum tincidunt enim sem, quis
+      accumsan tellus efficitur a. In vitae augue eget justo eleifend vehicula.
+      Suspendisse a efficitur nulla, nec blandit libero. In ac laoreet elit.
+      Etiam gravida nunc vel metus varius, eget molestie est mollis. Phasellus
+      rhoncus elit rhoncus, consequat erat eu, vehicula dolor. Etiam suscipit
+      dui leo, sit amet molestie sapien tincidunt sit amet. Nulla ullamcorper
+      pharetra metus et imperdiet. Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit. Donec vitae auctor enim. Phasellus scelerisque lorem
+      tellus, nec congue ex bibendum eu. Mauris fringilla nisi in elementum
+      rutrum. Mauris vel dui ut odio gravida rutrum vel et nisl. Nulla dapibus
+      elit sed nunc dictum, fringilla rutrum orci auctor. Phasellus dolor eros,
+      bibendum ac rutrum vitae, eleifend quis felis. Phasellus lacinia tempor
+      nisl imperdiet aliquam. Phasellus venenatis, eros in commodo dignissim,
+      sem nisi efficitur odio, at pretium dolor mauris quis nulla. Sed lobortis
+      elementum placerat. Phasellus vehicula eleifend ex, et aliquet tellus
+      elementum dignissim. Phasellus vel nisi elit. Vestibulum est tellus,
+      dapibus sed mi nec, laoreet eleifend ipsum. Phasellus maximus porttitor
+      tempus. Maecenas scelerisque eleifend laoreet. Duis vitae tellus bibendum,
+      iaculis enim molestie, malesuada eros. Vestibulum mattis, sapien a pretium
+      accumsan, sem nisl interdum est, non lacinia dui felis sed nisl.
+      Pellentesque maximus sit amet lorem vel viverra. Nam ac efficitur dui. Ut
+      semper turpis at hendrerit dapibus. Curabitur ut quam libero. Nam interdum
+      nisl ut vehicula tincidunt. Vestibulum ante ipsum primis in faucibus orci
+      luctus et ultrices posuere cubilia curae; Etiam sodales nunc et tortor
+      cursus, convallis tempus urna dapibus. Donec massa orci, feugiat vel
+      turpis porta, commodo commodo enim. In dictum ipsum nisi, in pretium purus
+      fermentum vitae. Mauris gravida nibh in blandit vestibulum. Aenean posuere
+      gravida elit ac maximus. Phasellus posuere felis mauris, et egestas velit
+      dictum eget. Ut scelerisque, urna ac elementum scelerisque, est nulla
+      aliquam velit, in ultricies tortor lorem id tellus. Class aptent taciti
+      sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut
+      fermentum ex sit amet rhoncus ultricies. Ut dapibus, leo condimentum
+      fermentum varius, odio libero faucibus erat, at vestibulum ligula justo ut
+      turpis. Maecenas euismod mauris at nisi varius commodo. In scelerisque
+      magna egestas urna ornare dignissim. Etiam nunc velit, scelerisque et est
+      at, mattis porta urna. In aliquam nunc vitae felis consectetur efficitur.
+      Aliquam erat volutpat. Donec semper congue libero, vulputate ornare
+      tortor. Vestibulum congue eros non felis tristique, eget euismod augue
+      dictum. Vestibulum aliquam, ligula quis dapibus accumsan, lectus turpis
+      facilisis leo, vitae iaculis tellus risus ut ligula. Proin nec sagittis
+      tortor. Pellentesque habitant morbi tristique senectus et netus et
+      malesuada fames ac turpis egestas.
+    </p>
+  </body>
+</html>
+
+~~~
 ### Caja flexible
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .contenedor {
+        /*esto comvierte al contenedor en eun elemento flex*/
+        /*esto es parecido a inline block*/
+        display: flex;
+        height: 80px;
+        background-color: rgb(187, 255, 0);
+        /*obliga a los elementos a ponerse como si fuera una
+      columna pero dentro de la caja container*/
+        flex-direction: column;
+        /*los pone como una fila*/
+        flex-direction: row;
+        /*poner espacios entre los elementos*/
+        justify-content: space-between;
+        /*los pone a un espacio antes y despues*/
+        justify-content: space-around;
+        /*le spone el mismo espacio a todos*/
+        justify-content: space-evenly;
+        /*pone los elementos en el inicio de la parte de 
+      arriba*/
+        align-items: flex-start;
+        /*pone los elementos en el fin de la parte de abajo*/
+        align-items: flex-end;
+        /*poner en el centro los elemtos*/
+        align-items: center;
+        /*esto hace que is hay muchos elementos los nuevo
+      que van llegando se pasen a la siguiente linea, si no
+      los elementos se mantienen flexibles y se van puchurrando
+      hasta que caben*/
+        flex-wrap: wrap;
+      }
+      .contenedor div {
+        width: 80px;
+        height: 40px;
+      }
+
+      /*mini reto*/
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: lightgray;
+        width: 100%;
+        height: 200px;
+      }
+
+      div > div {
+        background-color: gray;
+        height: 100px;
+      }
+
+      div > div:first-child {
+        background-color: red;
+        /*con flex basis le damos el tamaño que queremos que tenga
+        relativo a la pantalla haciendo asi que esta caja siempre
+        ocupe el 20% de la seccion que la contiene */
+        flex-basis: 20%;
+      }
+
+      div > div:nth-child(2) {
+        background-color: green;
+        flex-basis: 60%;
+      }
+
+      div > div:last-child {
+        background-color: blue;
+        flex-basis: 20%;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="contenedor">
+      <div style="background-color: rgb(119, 0, 255)"></div>
+      <div style="background-color: rgb(255, 0, 64)"></div>
+      <div style="background-color: rgb(0, 132, 255)"></div>
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <div style="background-color: rgb(255, 0, 64)"></div>
+    </div>
+  </body>
+</html>
+
+~~~
 ### Cuadricula
+~~~html
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /*flexbox esta echo para cajas que solo tengan una 
+    direccion mientras que grid es para 2 direcciones*/
+      html {
+        /*ponemos que queremos que sea el 100% de la pagina*/
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100%;
+        display: grid;
+        /*primero se pone el ancho de las columnas
+        auto hace que ocupe todo lo que no se ha ocupado*/
+        grid-template-columns: 100px auto;
+        /*ponemos que queremos que haya 3 columnas*/
+        grid-template-rows: 40px auto 100px;
+        gap: 10px; /*espacio entre filas y columnas*/
+      }
+
+      nav,
+      aside,
+      main,
+      footer {
+        border-radius: 5px;
+        /*a todos los elementos que van dentro de la 
+      cuadricula se le da el atributo flex, para que sean 
+      flexibles*/
+        display: flex;
+        /*con align items center hacemos que las cosas 
+      que tienen dentro las cajas flex vayan hacia 
+      el centro*/
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        background: lightsalmon;
+        /*espacio entre los elementos*/
+        justify-content: space-around;
+        /*en donde empieza la fila*/
+        grid-row-start: 1;
+        /*en donde termina la fila*/
+        grid-row-end: 2;
+        /*empieza en la columna 1*/
+        grid-column-start: 1;
+        /*termina en la columna 3*/
+        grid-column-end: 3;
+      }
+
+      aside {
+        background: violet;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+
+      main {
+        background: greenyellow;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+
+      footer {
+        background: lightseagreen;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+
+      /*mini reto*/
+      div {
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 50px 50px 50px 50px;
+        gap: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <a href="/home">Hogar</a>
+      <a href="/more">Aprende</a>
+      <a href="/about">Acerca De</a>
+    </nav>
+    <aside>Contenido Lateral</aside>
+    <main>Contenido Principal</main>
+    <footer>&copy; Xavier Reyes Ochoa 2025</footer>
+  </body>
+</html>
+
+~~~
 ### Reto: Disposición
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body{
+        background-color: #FFFFFF;
+      }
+      header{
+        position: fixed;
+        background-color: #FBFF1F;
+        width: 100%;
+        height: 80px;
+        text-align: center;
+      }
+      nav{
+        line-height: 80px;
+      }
+      nav a{
+        text-decoration: none;
+        color: red;
+        padding: 10px 20px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      #container{
+        padding-top: 130px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .card{
+        border: 1px solid #DDDDDD;
+        background-color: #FFFFFF;
+        padding: 15px;
+        width: 200px;
+        margin: 10px;
+      }
+      .card a{
+        color: #2266CC;
+        padding-top: 20px;
+      }
+      img{
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comida rapida</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Productos</a>
+        <a href="#">Servicios</a>
+        <a href="#">Contacto</a>
+      </nav>
+    </header>
+    <div id="container">
+
+      <div class="card">
+        <img src="https://th.bing.com/th/id/R.397d033dfab8d6a17d58dd509f0ab463?rik=6Cmqa4gfHF%2bVug&pid=ImgRaw&r=0" alt="imagen de comida">
+        <h3>Tarjeta 1</h3>
+        <p>Descripción de la tarjeta 1</p>
+        <a href="#">Ver más</a>
+      </div>
+      
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.-W7cRhSiDk_gfo-uqvglAgHaE7?pid=ImgDet&rs=1" alt="imagen de comida">
+        <h3>Tarjeta 2</h3>
+        <p>Descripción de la tarjeta 2</p>
+        <a href="#">Ver más</a>
+      </div>
+
+      <div class="card">
+        <img src="https://th.bing.com/th/id/R.b2d883bbff785661dd0b469249f029a3?rik=HJ9TIZsanbuvUg&pid=ImgRaw&r=0" alt="imagen de comida">
+        <h3>Tarjeta 3</h3>
+        <p>Descripción de la tarjeta 3</p>
+        <a href="#">Ver más</a>
+      </div>
+
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.7_p-KUoioBOBr2PN_TYbLgHaEo?pid=ImgDet&rs=1" alt="imagen de comida">
+        <h3>Tarjeta 4</h3>
+        <p>Descripción de la tarjeta 4</p>
+        <a href="#">Ver más</a>
+      </div>
+
+      <div class="card">
+        <img src="https://th.bing.com/th/id/R.397d033dfab8d6a17d58dd509f0ab463?rik=6Cmqa4gfHF%2bVug&pid=ImgRaw&r=0" alt="imagen de comida">
+        <h3>Tarjeta 1</h>
+        <p>Descripción de la tarjeta 1</p>
+        <a href="#">Ver más</a>
+      </div>
+      
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.-W7cRhSiDk_gfo-uqvglAgHaE7?pid=ImgDet&rs=1" alt="imagen de comida">
+        <h3>Tarjeta 2</h3>
+        <p>Descripción de la tarjeta 2</p>
+        <a href="#">Ver más</a>
+      </div>
+
+      <div class="card">
+        <img src="https://th.bing.com/th/id/R.b2d883bbff785661dd0b469249f029a3?rik=HJ9TIZsanbuvUg&pid=ImgRaw&r=0" alt="imagen de comida">
+        <h3>Tarjeta 3</h3>
+        <p>Descripción de la tarjeta 3</p>
+        <a href="#">Ver más</a>
+      </div>
+
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.7_p-KUoioBOBr2PN_TYbLgHaEo?pid=ImgDet&rs=1" alt="imagen de comida">
+        <h3>Tarjeta 4</h3>
+        <p>Descripción de la tarjeta 4</p>
+        <a href="#">Ver más</a>
+      </div>
+
+      <div class="card">
+        <img src="https://th.bing.com/th/id/R.397d033dfab8d6a17d58dd509f0ab463?rik=6Cmqa4gfHF%2bVug&pid=ImgRaw&r=0" alt="imagen de comida">
+        <h3>Tarjeta 1</h>
+        <p>Descripción de la tarjeta 1</p>
+        <a href="#">Ver más</a>
+      </div>
+      
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.-W7cRhSiDk_gfo-uqvglAgHaE7?pid=ImgDet&rs=1" alt="imagen de comida">
+        <h3>Tarjeta 2</h3>
+        <p>Descripción de la tarjeta 2</p>
+        <a href="#">Ver más</a>
+      </div>
+
+      <div class="card">
+        <img src="https://th.bing.com/th/id/R.b2d883bbff785661dd0b469249f029a3?rik=HJ9TIZsanbuvUg&pid=ImgRaw&r=0" alt="imagen de comida">
+        <h3>Tarjeta 3</h3>
+        <p>Descripción de la tarjeta 3</p>
+        <a href="#">Ver más</a>
+      </div>
+
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.7_p-KUoioBOBr2PN_TYbLgHaEo?pid=ImgDet&rs=1" alt="imagen de comida">
+        <h3>Tarjeta 4</h3>
+        <p>Descripción de la tarjeta 4</p>
+        <a href="#">Ver más</a>
+      </div>
+      
+    </div>
+  </body>
+</html>
+
+~~~
 
 ## Diseño adaptable
 ### Consulta de medios

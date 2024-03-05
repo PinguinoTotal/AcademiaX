@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /*flexbox esta echo para cajas que solo tengan una 
+    direccion mientras que grid es para 2 direcciones*/
+      html {
+        /*ponemos que queremos que sea el 100% de la pagina*/
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100%;
+        display: grid;
+        /*primero se pone el ancho de las columnas
+        auto hace que ocupe todo lo que no se ha ocupado*/
+        grid-template-columns: 100px auto;
+        /*ponemos que queremos que haya 3 columnas*/
+        grid-template-rows: 40px auto 100px;
+        gap: 10px; /*espacio entre filas y columnas*/
+      }
+
+      nav,
+      aside,
+      main,
+      footer {
+        border-radius: 5px;
+        /*a todos los elementos que van dentro de la 
+      cuadricula se le da el atributo flex, para que sean 
+      flexibles*/
+        display: flex;
+        /*con align items center hacemos que las cosas 
+      que tienen dentro las cajas flex vayan hacia 
+      el centro*/
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        background: lightsalmon;
+        /*espacio entre los elementos*/
+        justify-content: space-around;
+        /*en donde empieza la fila*/
+        grid-row-start: 1;
+        /*en donde termina la fila*/
+        grid-row-end: 2;
+        /*empieza en la columna 1*/
+        grid-column-start: 1;
+        /*termina en la columna 3*/
+        grid-column-end: 3;
+      }
+
+      aside {
+        background: violet;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+
+      main {
+        background: greenyellow;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+
+      footer {
+        background: lightseagreen;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+
+      /*mini reto*/
+      div {
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 50px 50px 50px 50px;
+        gap: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <a href="/home">Hogar</a>
+      <a href="/more">Aprende</a>
+      <a href="/about">Acerca De</a>
+    </nav>
+    <aside>Contenido Lateral</aside>
+    <main>Contenido Principal</main>
+    <footer>&copy; Xavier Reyes Ochoa 2025</footer>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      div {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+      }
+
+      #primero {
+        /*los flotados nos dicen que los elementos flotaran
+        y los demas elementos lo rodearan*/
+        float: left;
+      }
+
+      #segundo {
+        /*en esto el texto emvuelve a las cajas que ya estaban 
+        flotadas*/
+        float: right;
+      }
+      p {
+        text-align: justify;
+        /*clear both nos dice que ignore a los elementos flotados
+        que los anteceden */
+        clear: both;
+      }
+
+      /*mini reto*/
+      div {
+        height: 100px;
+      }
+
+      div.columna-izquierda {
+        width: 200px;
+        float: left;
+        background-color: #ccc;
+        margin-right: 20px;
+      }
+
+      div.columna-derecha {
+        /*esto hace que abarque todo lo que sobra de la 
+        pantalla si tiene elementos flotados en la misma
+        linea*/
+        overflow: hidden;
+        background-color: #eee;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flotados</title>
+  </head>
+  <body>
+    <div id="primero" style="background-color: rgb(88, 228, 209)"></div>
+    <div id="segundo" style="background-color: rgb(187, 255, 0)"></div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper
+      dolor non libero luctus pellentesque. Vestibulum tincidunt enim sem, quis
+      accumsan tellus efficitur a. In vitae augue eget justo eleifend vehicula.
+      Suspendisse a efficitur nulla, nec blandit libero. In ac laoreet elit.
+      Etiam gravida nunc vel metus varius, eget molestie est mollis. Phasellus
+      rhoncus elit rhoncus, consequat erat eu, vehicula dolor. Etiam suscipit
+      dui leo, sit amet molestie sapien tincidunt sit amet. Nulla ullamcorper
+      pharetra metus et imperdiet. Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit. Donec vitae auctor enim. Phasellus scelerisque lorem
+      tellus, nec congue ex bibendum eu. Mauris fringilla nisi in elementum
+      rutrum. Mauris vel dui ut odio gravida rutrum vel et nisl. Nulla dapibus
+      elit sed nunc dictum, fringilla rutrum orci auctor. Phasellus dolor eros,
+      bibendum ac rutrum vitae, eleifend quis felis. Phasellus lacinia tempor
+      nisl imperdiet aliquam. Phasellus venenatis, eros in commodo dignissim,
+      sem nisi efficitur odio, at pretium dolor mauris quis nulla. Sed lobortis
+      elementum placerat. Phasellus vehicula eleifend ex, et aliquet tellus
+      elementum dignissim. Phasellus vel nisi elit. Vestibulum est tellus,
+      dapibus sed mi nec, laoreet eleifend ipsum. Phasellus maximus porttitor
+      tempus. Maecenas scelerisque eleifend laoreet. Duis vitae tellus bibendum,
+      iaculis enim molestie, malesuada eros. Vestibulum mattis, sapien a pretium
+      accumsan, sem nisl interdum est, non lacinia dui felis sed nisl.
+      Pellentesque maximus sit amet lorem vel viverra. Nam ac efficitur dui. Ut
+      semper turpis at hendrerit dapibus. Curabitur ut quam libero. Nam interdum
+      nisl ut vehicula tincidunt. Vestibulum ante ipsum primis in faucibus orci
+      luctus et ultrices posuere cubilia curae; Etiam sodales nunc et tortor
+      cursus, convallis tempus urna dapibus. Donec massa orci, feugiat vel
+      turpis porta, commodo commodo enim. In dictum ipsum nisi, in pretium purus
+      fermentum vitae. Mauris gravida nibh in blandit vestibulum. Aenean posuere
+      gravida elit ac maximus. Phasellus posuere felis mauris, et egestas velit
+      dictum eget. Ut scelerisque, urna ac elementum scelerisque, est nulla
+      aliquam velit, in ultricies tortor lorem id tellus. Class aptent taciti
+      sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut
+      fermentum ex sit amet rhoncus ultricies. Ut dapibus, leo condimentum
+      fermentum varius, odio libero faucibus erat, at vestibulum ligula justo ut
+      turpis. Maecenas euismod mauris at nisi varius commodo. In scelerisque
+      magna egestas urna ornare dignissim. Etiam nunc velit, scelerisque et est
+      at, mattis porta urna. In aliquam nunc vitae felis consectetur efficitur.
+      Aliquam erat volutpat. Donec semper congue libero, vulputate ornare
+      tortor. Vestibulum congue eros non felis tristique, eget euismod augue
+      dictum. Vestibulum aliquam, ligula quis dapibus accumsan, lectus turpis
+      facilisis leo, vitae iaculis tellus risus ut ligula. Proin nec sagittis
+      tortor. Pellentesque habitant morbi tristique senectus et netus et
+      malesuada fames ac turpis egestas.
+    </p>
+  </body>
+</html>
