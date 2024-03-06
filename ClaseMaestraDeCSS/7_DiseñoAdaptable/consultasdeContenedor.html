@@ -1,0 +1,27 @@
+<style>
+  div{
+    container: contenedor-x / 
+    inline-size;
+    background-color: blue;
+  }
+
+  span{
+    background-color: green;
+  }
+
+  /*la diferencia con los media queris y los container
+  es que los mediaqueris se fijan y le dan importancia 
+  a el tamaño de la pantalla, mientras que el container
+  se fija en el tamaño de el div o del contenedor 
+  que le estamos fijando*/
+  @container contenedor-x (width <=200px){
+    span{
+
+      /*esto hace que cuando la caja sea igual 
+      o menor de 200px*/
+      background-color: red;
+    }
+  }
+</style>
+
+<div><span>Contenido</span></div>
