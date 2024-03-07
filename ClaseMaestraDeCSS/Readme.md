@@ -2148,10 +2148,48 @@ crear elementos desde css
 
 ## Complementos
 ### Prefijos y soporte
+en esta clase vimos que antes todos los navegadores implementavan de diferente manera las transiciones entonces se debian declarar todas las maneras en las que se interpertaban para todos los navegadores ahora ya se han estandarizado estos, pero se puede entrar a una pagina para ver si se tiene que implementar más cosas para que la pagina no falle en cualcuer navegador
+~~~css
+html { height: 100%; }
+
+body {
+	background: -webkit-radial-gradient(ellipse at center, #fff, black);
+	background: -moz-radial-gradient(ellipse at center, #fff, black);
+	background: radial-gradient(ellipse at center, #fff, black);
+}
+~~~
 ### Centrar
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      /*mini reto*/
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div></div>
+    </header>
+  </body>
+</html>
+
+~~~
 
 ## Proyecto: Paleta
 ### Analisis de Diseño
+analisando una pagina que muestra una paleta de colores
 ### Implementación
 
 ## Productividad

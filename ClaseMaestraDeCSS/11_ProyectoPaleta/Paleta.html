@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      
+      header {
+        background-color: #d0d7df;
+        padding: 20px;
+        text-align: center;
+      }
+      #colores {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+        grid-template-rows: 50px 50px 50px 50px 50px;
+
+        div{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+        span{
+          opacity: 0;
+          transition: all .2s;
+        }
+      }
+
+      #colores div:hover{
+        span{
+          opacity: 1;
+        }
+      }
+      .white {
+        color: black;
+      }
+
+      .black {
+        color: white;
+      }
+
+      .gray {
+        color: gray;
+        /*asi se le pone el valor de columnas
+        por defecto*/
+        grid-column: span 3;
+      }
+
+      
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paleta de Colores</title>
+  </head>
+  <body>
+    <header>
+      <h1>Paleta</h1>
+    </header>
+    <div id="colores">
+      <div class="white" style="background-color: #ff7260"><span>#FF7260</span></div>
+      <div class="white" style="background-color: #f9a753"><span>#F9A753</span></div>
+      <div class="white" style="background-color: #f5dc44"><span>#F5DC44</span></div>
+      <div class="white" style="background-color: #c1f94e"><span>#C1F94E</span></div>
+      <div class="white" style="background-color: #8cfa5b"><span>#8CFA5B</span></div>
+      <div class="white" style="background-color: #77f4c8"><span>#77F4C8</span></div>
+      <div class="white" style="background-color: #6de7ff"><span>#6DE7FF</span></div>
+      <div class="white" style="background-color: #5ebdff"><span>#5EBDFF</span></div>
+      <div class="white" style="background-color: #4b7efe"><span>#8CFA5B</span></div>
+      <div class="white" style="background-color: #ac4fff"><span>#77F4C8</span></div>
+      <div class="white" style="background-color: #f65bff"><span>#F65BFF</span></div>
+      <div class="white" style="background-color: #ff69b1"><span>#FF69B1</span></div>
+
+      <div class="white" style="background-color: #ff4d37"><span>#FF4D37</span></div>
+      <div class="white" style="background-color: #ff8834"><span>#FF8834</span></div>
+      <div class="white" style="background-color: #f5c62e"><span>#F5C62E</span></div>
+      <div class="white" style="background-color: #a6fa30"><span>#A6FA30</span></div>
+      <div class="white" style="background-color: #65fd30"><span>#65FD30</span></div>
+      <div class="white" style="background-color: #52f6c2"><span>#52F6C2</span></div>
+      <div class="white" style="background-color: #48daff"><span>#48DAFF</span></div>
+      <div class="white" style="background-color: #3eabfe"><span>#3EABFE</span></div>
+      <div class="white" style="background-color: #3669ff"><span>#3669FF</span></div>
+      <div class="white" style="background-color: #903aff"><span>#903AFF</span></div>
+      <div class="white" style="background-color: #fa3aff"><span>#FA3AFF</span></div>
+      <div class="white" style="background-color: #fe3f83"><span>#FE3F83</span></div>
+
+      <div class="black" style="background-color: #d53130"><span>#D53130</span></div>
+      <div class="black" style="background-color: #d56129"><span>#D56129</span></div>
+      <div class="black" style="background-color: #d59c27"><span>#D59C27</span></div>
+      <div class="black" style="background-color: #7fd629"><span>#7FD629</span></div>
+      <div class="black" style="background-color: #4ed728"><span>#4ED728</span></div>
+      <div class="black" style="background-color: #3bc9a9"><span>#77F4C8</span></div>
+      <div class="black" style="background-color: #3fb9e3"><span>#3FB9E3</span></div>
+      <div class="black" style="background-color: #3590ed"><span>#3590ED</span></div>
+      <div class="black" style="background-color: #2f4eff"><span>#2F4EFF</span></div>
+      <div class="black" style="background-color: #6b30ff"><span>#6B30FF</span></div>
+      <div class="black" style="background-color: #cb34ff"><span>#CB34FF</span></div>
+      <div class="black" style="background-color: #ee3864"><span>#EE3864</span></div>
+
+      <div class="black" style="background-color: #ad2925"><span>#AD2925</span></div>
+      <div class="black" style="background-color: #ad5222"><span>#AD5222</span></div>
+      <div class="black" style="background-color: #b18121"><span>#B18121</span></div>
+      <div class="black" style="background-color: #6ab222"><span>#6AB222</span></div>
+      <div class="black" style="background-color: #41b423"><span>#41B423</span></div>
+      <div class="black" style="background-color: #2ca683"><span>#77F4C8</span></div>
+      <div class="black" style="background-color: #349abe"><span>#349ABE</span></div>
+      <div class="black" style="background-color: #2b78c8"><span>#2B78C8</span></div>
+      <div class="black" style="background-color: #2643e0"><span>#2643E0</span></div>
+      <div class="black" style="background-color: #5b27e7"><span>#5B27E7</span></div>
+      <div class="black" style="background-color: #a92adb"><span>#A92ADB</span></div>
+      <div class="black" style="background-color: #c72e52"><span>#C72E52</span></div>
+
+      <div id="E7" class="gray" style="background-color: #e7edf5;"><span>#E7EDF5</span></div>
+      <div id="D3" class="gray" style="background-color: #d3d9e1"><span>#D3D9E1</span></div>
+      <div id="4A" class="gray" style="background-color: #4a4c50"><span>#4A4C50</span></div>
+      <div id="33" class="gray" style="background-color: #333539"><span>#333539</span></div>
+    </div>
+  </body>
+</html>
