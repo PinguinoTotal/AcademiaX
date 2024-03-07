@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      header {
+        background-color: #59d0ff;
+        padding: 45px;
+        text-align: center;
+        color: white;
+      }
+
+      #mainContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .card {
+        width: 300px;
+        height: auto;
+        border: 1px solid #ddd;
+        box-shadow: 1px 1px 10px #ccc;
+        margin: 20px;
+
+        img {
+          width: 100%;
+        }
+
+        span {
+          color: #888888;
+          opacity: 0;
+          transition: all 0.5s;
+          font-size: 14px;
+        }
+
+        transition: all 0.5s;
+      }
+
+      .info {
+        padding: 15px;
+
+        p {
+          margin-top: 25px;
+        }
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        cursor: pointer;
+        span {
+          opacity: 1;
+        }
+      }
+
+      .info:hover {
+        background-color: #f9f9f9;
+
+        h2 {
+          color: #ff6600;
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina de Noticias con Estilos CSS</title>
+  </head>
+  <body>
+    <header>
+      <h1>Últimas Noticisa</h1>
+    </header>
+    <div id="mainContainer">
+      <div class="card">
+        <img
+          src="https://cdn2.mediotiempo.com/uploads/media/2020/02/26/noticias-deportivas-en-los-periodicos-13.jpg"
+          alt="foto de prensa"
+        />
+        <div class="info">
+          <h2>Noticia 1</h2>
+          <p>Descripción de la noticia 1</p>
+          <p>
+            Autor: Jhon Doe <br />
+            <span>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://cdn2.mediotiempo.com/uploads/media/2020/02/26/noticias-deportivas-en-los-periodicos-13.jpg"
+          alt="foto de prensa"
+        />
+        <div class="info">
+          <h2>Noticia 2</h2>
+          <p>Descripción de la noticia 2</p>
+          <p>Autor: Jhon Doe <br />
+            <span>
+              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://cdn2.mediotiempo.com/uploads/media/2020/02/26/noticias-deportivas-en-los-periodicos-13.jpg"
+          alt="foto de prensa"
+        />
+        <div class="info">
+          <h2>Noticia 3</h2>
+          <p>Descripción de la noticia 3</p>
+          <p>Autor: Jhon Doe <br />
+            <span>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

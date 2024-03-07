@@ -1505,21 +1505,646 @@ si se van a utilizar layauts lo mejor es utilizar css grids y flexboxs
 
 ## Diseño adaptable
 ### Consulta de medios
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        /*el fontsize a 0 quita los espacios entre
+      las cajas*/
+        font-size: 0;
+      }
+
+      div {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+      }
+
+      /*los mediacueris detectan el tamaño del dispositivo
+    y le dan diferentes estilos a la pagina*/
+      /*esto va a pasar cuando la pantalla tenga un maximo de 
+    500 pixeles*/
+      @media only screen and (max-width: 500px) {
+        div {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      /*mini reto*/
+      body {
+        background-color: blue;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          background-color: green;
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediaQueris</title>
+  </head>
+  <body>
+    <div style="background-color: #ff0038"></div>
+    <div style="background-color: #00ffc1"></div>
+    <div style="background-color: #6c01ff"></div>
+    <div style="background-color: #ff00da"></div>
+    <div style="background-color: #9cff00"></div>
+  </body>
+</html>
+
+~~~
 ### Móvil primero
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+      }
+      /*lo más nuevo en tecnologia nos dice que por ahora
+      debemos enfocarnos en el movil primero*/
+
+      div {
+        display: inline-block;
+        
+        width: 40px;
+        height: 40px;
+      }
+      /*esto hace lo mismo que la paguina anterior
+      pero ahora primero se toma en cuenta el movil 
+      y los mediaqueris estan echos para los demás
+      */
+      @media only screen and (min-width: 500px) {
+        div {
+          width: 100px;
+        height: 100px;
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediaQueris</title>
+  </head>
+  <body>
+    <div style="background-color: #ff0038"></div>
+    <div style="background-color: #00ffc1"></div>
+    <div style="background-color: #6c01ff"></div>
+    <div style="background-color: #ff00da"></div>
+    <div style="background-color: #9cff00"></div>
+  </body>
+</html>
+
+~~~
 ### Consultas de contenedores
+~~~html
+<style>
+  div{
+    container: contenedor-x / 
+    inline-size;
+    background-color: blue;
+  }
+
+  span{
+    background-color: green;
+  }
+
+  /*la diferencia con los media queris y los container
+  es que los mediaqueris se fijan y le dan importancia 
+  a el tamaño de la pantalla, mientras que el container
+  se fija en el tamaño de el div o del contenedor 
+  que le estamos fijando*/
+  @container contenedor-x (width <=200px){
+    span{
+
+      /*esto hace que cuando la caja sea igual 
+      o menor de 200px*/
+      background-color: red;
+    }
+  }
+</style>
+
+<div><span>Contenido</span></div>
+~~~
 ### Reto: Diseño adaptable
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body{
+        background-color: #F5F5F5;
+      }
+      header{
+        background-color: #333333;
+        color: white;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        text-align: center;
+      }
+      .menu_button{
+        display: none;
+        border: 1px solid white;
+        width: 65px;
+        text-align: center;
+        margin: 0px auto;
+        padding: 10px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      #container{
+        display: flex;
+        flex-wrap:wrap ;
+
+      }
+      .card{
+        margin: 10px;
+        width: 300px;
+        border: 1px solid #DDDDDD;
+        padding: 15px;
+        background-color: white;
+      }
+      img{
+        width: 100%;
+        height: auto;
+      }
+
+      @media (max-width: 600px) {
+        .card{
+          width: 90%;
+          margin: 10px auto;
+        }
+
+        .menu_button{
+          display: block;
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Peliculas animadas</h1>
+      <div class="menu_button">Menú</div>
+    </header>
+    <div id="container">
+      <div class="card">
+        <img src="https://th.bing.com/th/id/R.66b87ed6a638c8e95294fbfcefb7dade?rik=rQh7x373c3xTZg&pid=ImgRaw&r=0" alt="Producto 1">
+        <h3>Pelicula 1</h3>
+        <p>Descripción del producto 1.</p>
+        <p>$19.99</p>
+        <a href="#">Comprar</a>
+      </div>
+
+      <div class="card">
+        <img src="https://th.bing.com/th/id/R.66b87ed6a638c8e95294fbfcefb7dade?rik=rQh7x373c3xTZg&pid=ImgRaw&r=0" alt="Producto 1">
+        <h3>Pelicula 2</h3>
+        <p>Descripción del producto 2.</p>
+        <p>$19.99</p>
+        <a href="#">Comprar</a>
+      </div>
+
+      <div class="card">
+        <img src="https://th.bing.com/th/id/R.66b87ed6a638c8e95294fbfcefb7dade?rik=rQh7x373c3xTZg&pid=ImgRaw&r=0" alt="Producto 1">
+        <h3>Pelicula 3</h3>
+        <p>Descripción del producto 3.</p>
+        <p>$19.99</p>
+        <a href="#">Comprar</a>
+      </div>
+    </div>
+  </body>
+</html>
+
+~~~
 
 ## Selectores avanzados
 ### Pseudoclases
 ### Pseudoelementos
+crear elementos desde css 
+~~~html
+<style>
+  /*esto lo hace cuando pasamos sobre los elementos*/
+  p:hover{
+    color: blue;
+    background-color: beige;
+  }
+  /*cuando le doy click al elemento 
+  se aplican estos estilos*/
+  button:active{
+    color: red;
+  }
+  /*cuando me enfoco en algo o más bien 
+  cuando le doy click a una casilla*/
+  input:focus{
+    outline: 2px solid green;
+  }
+
+  /*esto lo aplica cuando ya has visistado este 
+  enlace*/
+  a:visited{
+    color: purple;
+  }
+  /*apuntamos al primer p que se ha encontrado*/
+  div p:first-child{
+    font-weight: bold;
+  }
+  /*apuntamos al ultimo p que se ha encontrado en el div*/
+  div p:last-child{
+    font-style: italic;
+  }
+  /*selecciono que hijo quiero apuntar*/
+  div p:nth-child(2){
+    color: orange;
+  }
+
+  /*pseudoclase que dice que a esta clase no se 
+  le pondran los estilos que decimos*/
+  #rayados p:not(.excluido){
+    text-decoration: underline;
+  }
+
+  /*añade solo a elementos impares*/
+  p:nth-of-type(odd){
+    background-color: brown;
+  }
+  /*se aplicaran los estilos cuando el checkbox
+  este chequeado*/
+  input:checked{
+    outline: 2px solid blue;
+  }
+  /*si tiene esta etiqueta dentro de ella aplicara 
+  el estilo*/
+  p:has(span){
+    color: red;
+  }
+</style>
+<p>Pasa el cursor sorbe este párrafo</p>
+<button>Has click en este boton</button>
+
+<input type="text" placeholder="haz click aqui" id="">
+
+<a href="#">Enlace visitado</a>
+
+<div>
+  <p>primer parrafo</p>
+  <p>segundo parrafo</p>
+  <p>Tercer parrafo</p>
+</div>
+
+<div id="rayados">
+  <p class="excluido">No subrayado</p>
+  <p>subrayado</p>
+</div>
+
+<div>
+  <p>1</p>
+  <p>2</p>
+  <p>3</p>
+  <p>4</p>
+  <p>5</p>
+</div>
+
+<div>
+  <input type="checkbox" name="" id="">
+  <input type="checkbox" name="" id="">
+</div>
+
+<p><span>Tiene span</span></p>
+<p>no tiene span</p>
+~~~
 ### Anidamientos
+~~~html
+<style>
+  /*porfin se pueden hacer los anidamientos en 
+  css nativo sin la necesidad de usar less o sass*/
+  div{
+    color: brown;
+    .anidamiento{
+      color: blue;
+    }
+  }
+</style>
+<div>
+  <p>cosas</p>
+  <p class="anidamiento">anidamiento</p>
+</div>
+
+~~~
 ### Capas
+~~~html
+<style>
+  @layer base, top;
+
+  /*las capas nos dicen como se van 
+  a colorear los estilos dependiendo de 
+  como se pongan en la parte de arriba
+  en @layer 
+  si se pone @layer base, top:
+  el div se vera azul
+  si se pone @layer top, base:
+  el div se vera amarillo*/
+  @layer base {
+    div{
+      background-color: yellow;
+    }
+  }
+
+  @layer top {
+    div{
+      background-color: aqua;
+    }
+  }
+</style>
+<div>Capas</div>
+~~~
 
 ## Dinamismo
 ### Transformaciones
+~~~html
+<style>
+  div{
+    background-color: coral;
+    width: 100px;
+    height: 100px;
+    /*lo mueve hacia la derecha o izquierda*/
+    transform: translateX(50px);
+    /*lo mueve hacia arriba o abajo */
+    transform: translateY(50px);
+    /*lo mueve derechaizqueirda y arribabajo*/
+    transform: translate(50px, 50px);
+    /*escalando el div*/
+    transform: scaleY(1.5);
+    /*rotando el elemento*/
+    transform: rotate(30deg);
+    /*disotcionar el cuadrado*/
+    transform: skewX(30deg);
+  }
+
+  /*mini reto*/
+  div {
+  background-color: lightblue; 
+  transform: translateX(125px);
+}
+</style>
+<div></div>
+~~~
 ### Transiciones
+~~~html
+<style>
+  div {
+    background-color: coral;
+    height: 150px;
+    width: 150px;
+    /*aqui se definen que valores o 
+    aspectos van a cambair durante 
+    la transicion*/
+    transition-property: all;
+    /*aqui se le pone el tiempo que va
+    a tardar en hacer la transicion*/
+    transition-duration: 0.5s;
+    /*esta es la curva de tiempo que le va a 
+    tomar a la animacion hacerse*/
+    transition-timing-function: ease-in-out;
+    /*ease es la que viene por defecto*/
+    /*linear*/
+    /*este empieza lento y termina rapiod*/
+    /*ease-in*/
+    /*este empieza rapido y termina lento*/
+    /*ease-out*/
+    /*este empieza y termina lento, pero durante la 
+    transision va rapido*/
+    /*ease-in-out*/
+    /*hay otro tipo de curbas, lo que se debe hacer 
+    es ir a easings.net y ahi estaran todas las 
+    curvas y pues ya se puede hace uso de ellas
+    mientras ponen un ejemplo de ellas*/
+    /*para hacerlo mas compacto se puede hacer:*/
+    transition: all 0.5s ease-in-out;
+  }
+  div:hover {
+    width: 300px;
+    height: 250px;
+    background-color: skyblue;
+    transform: rotate(45deg);
+  }
+
+  /*mini reto*/
+  div {
+    background-color: lightblue;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+  div:hover {
+    opacity: 0.5;
+  }
+</style>
+<div></div>
+
+~~~
 ### Animaciones
+~~~html
+<style>
+  div {
+    background-color: royalblue;
+    width: 100px;
+    height: 100px;
+    /*TODO ESTO PUEDE SER CAMBIADO POR animation*/
+    /*asiganando la animacional div*/
+    animation-name: mover;
+    /*asignando la duracion de la animacion*/
+    animation-duration: 2s;
+    /*cuantas veces se va a hacer la animacion*/
+    animation-iteration-count: infinite;
+    /*esto es lo mismo que en las transiciones*/
+    animation-timing-function: ease-in-out;
+
+    animation: mover 2s ease-in-out infinite;
+  }
+
+  @keyframes mover {
+    /*poniendo los "pasos" de la animacion*/
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      background-color: red;
+    }
+
+    100% {
+      transform: translateX(200px);
+    }
+  }
+
+  /*mini reto*/
+  div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: girar 2s linear infinite;
+  }
+
+  @keyframes girar {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+<div></div>
+
+~~~
 ### Reto: Dinamismo
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      header {
+        background-color: #59d0ff;
+        padding: 45px;
+        text-align: center;
+        color: white;
+      }
+
+      #mainContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .card {
+        width: 300px;
+        height: auto;
+        border: 1px solid #ddd;
+        box-shadow: 1px 1px 10px #ccc;
+        margin: 20px;
+
+        img {
+          width: 100%;
+        }
+
+        span {
+          color: #888888;
+          opacity: 0;
+          transition: all 0.5s;
+          font-size: 14px;
+        }
+
+        transition: all 0.5s;
+      }
+
+      .info {
+        padding: 15px;
+
+        p {
+          margin-top: 25px;
+        }
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        cursor: pointer;
+        span {
+          opacity: 1;
+        }
+      }
+
+      .info:hover {
+        background-color: #f9f9f9;
+
+        h2 {
+          color: #ff6600;
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina de Noticias con Estilos CSS</title>
+  </head>
+  <body>
+    <header>
+      <h1>Últimas Noticisa</h1>
+    </header>
+    <div id="mainContainer">
+      <div class="card">
+        <img
+          src="https://cdn2.mediotiempo.com/uploads/media/2020/02/26/noticias-deportivas-en-los-periodicos-13.jpg"
+          alt="foto de prensa"
+        />
+        <div class="info">
+          <h2>Noticia 1</h2>
+          <p>Descripción de la noticia 1</p>
+          <p>
+            Autor: Jhon Doe <br />
+            <span>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://cdn2.mediotiempo.com/uploads/media/2020/02/26/noticias-deportivas-en-los-periodicos-13.jpg"
+          alt="foto de prensa"
+        />
+        <div class="info">
+          <h2>Noticia 2</h2>
+          <p>Descripción de la noticia 2</p>
+          <p>Autor: Jhon Doe <br />
+            <span>
+              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://cdn2.mediotiempo.com/uploads/media/2020/02/26/noticias-deportivas-en-los-periodicos-13.jpg"
+          alt="foto de prensa"
+        />
+        <div class="info">
+          <h2>Noticia 3</h2>
+          <p>Descripción de la noticia 3</p>
+          <p>Autor: Jhon Doe <br />
+            <span>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+~~~
 
 ## Complementos
 ### Prefijos y soporte

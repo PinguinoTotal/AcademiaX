@@ -1,0 +1,50 @@
+<style>
+  div {
+    background-color: royalblue;
+    width: 100px;
+    height: 100px;
+    /*TODO ESTO PUEDE SER CAMBIADO POR animation*/
+    /*asiganando la animacional div*/
+    animation-name: mover;
+    /*asignando la duracion de la animacion*/
+    animation-duration: 2s;
+    /*cuantas veces se va a hacer la animacion*/
+    animation-iteration-count: infinite;
+    /*esto es lo mismo que en las transiciones*/
+    animation-timing-function: ease-in-out;
+
+    animation: mover 2s ease-in-out infinite;
+  }
+
+  @keyframes mover {
+    /*poniendo los "pasos" de la animacion*/
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      background-color: red;
+    }
+
+    100% {
+      transform: translateX(200px);
+    }
+  }
+
+  /*mini reto*/
+  div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: girar 2s linear infinite;
+  }
+
+  @keyframes girar {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+<div></div>

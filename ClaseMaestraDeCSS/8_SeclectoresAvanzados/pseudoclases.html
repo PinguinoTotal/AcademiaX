@@ -1,0 +1,89 @@
+<style>
+  /*esto lo hace cuando pasamos sobre los elementos*/
+  p:hover{
+    color: blue;
+    background-color: beige;
+  }
+  /*cuando le doy click al elemento 
+  se aplican estos estilos*/
+  button:active{
+    color: red;
+  }
+  /*cuando me enfoco en algo o más bien 
+  cuando le doy click a una casilla*/
+  input:focus{
+    outline: 2px solid green;
+  }
+
+  /*esto lo aplica cuando ya has visistado este 
+  enlace*/
+  a:visited{
+    color: purple;
+  }
+  /*apuntamos al primer p que se ha encontrado*/
+  div p:first-child{
+    font-weight: bold;
+  }
+  /*apuntamos al ultimo p que se ha encontrado en el div*/
+  div p:last-child{
+    font-style: italic;
+  }
+  /*selecciono que hijo quiero apuntar*/
+  div p:nth-child(2){
+    color: orange;
+  }
+
+  /*pseudoclase que dice que a esta clase no se 
+  le pondran los estilos que decimos*/
+  #rayados p:not(.excluido){
+    text-decoration: underline;
+  }
+
+  /*añade solo a elementos impares*/
+  p:nth-of-type(odd){
+    background-color: brown;
+  }
+  /*se aplicaran los estilos cuando el checkbox
+  este chequeado*/
+  input:checked{
+    outline: 2px solid blue;
+  }
+  /*si tiene esta etiqueta dentro de ella aplicara 
+  el estilo*/
+  p:has(span){
+    color: red;
+  }
+</style>
+<p>Pasa el cursor sorbe este párrafo</p>
+<button>Has click en este boton</button>
+
+<input type="text" placeholder="haz click aqui" id="">
+
+<a href="#">Enlace visitado</a>
+
+<div>
+  <p>primer parrafo</p>
+  <p>segundo parrafo</p>
+  <p>Tercer parrafo</p>
+</div>
+
+<div id="rayados">
+  <p class="excluido">No subrayado</p>
+  <p>subrayado</p>
+</div>
+
+<div>
+  <p>1</p>
+  <p>2</p>
+  <p>3</p>
+  <p>4</p>
+  <p>5</p>
+</div>
+
+<div>
+  <input type="checkbox" name="" id="">
+  <input type="checkbox" name="" id="">
+</div>
+
+<p><span>Tiene span</span></p>
+<p>no tiene span</p>

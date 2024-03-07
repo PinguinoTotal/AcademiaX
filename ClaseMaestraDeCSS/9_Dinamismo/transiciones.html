@@ -1,0 +1,51 @@
+<style>
+  div {
+    background-color: coral;
+    height: 150px;
+    width: 150px;
+    /*aqui se definen que valores o 
+    aspectos van a cambair durante 
+    la transicion*/
+    transition-property: all;
+    /*aqui se le pone el tiempo que va
+    a tardar en hacer la transicion*/
+    transition-duration: 0.5s;
+    /*esta es la curva de tiempo que le va a 
+    tomar a la animacion hacerse*/
+    transition-timing-function: ease-in-out;
+    /*ease es la que viene por defecto*/
+    /*linear*/
+    /*este empieza lento y termina rapiod*/
+    /*ease-in*/
+    /*este empieza rapido y termina lento*/
+    /*ease-out*/
+    /*este empieza y termina lento, pero durante la 
+    transision va rapido*/
+    /*ease-in-out*/
+    /*hay otro tipo de curbas, lo que se debe hacer 
+    es ir a easings.net y ahi estaran todas las 
+    curvas y pues ya se puede hace uso de ellas
+    mientras ponen un ejemplo de ellas*/
+    /*para hacerlo mas compacto se puede hacer:*/
+    transition: all 0.5s ease-in-out;
+  }
+  div:hover {
+    width: 300px;
+    height: 250px;
+    background-color: skyblue;
+    transform: rotate(45deg);
+  }
+
+  /*mini reto*/
+  div {
+    background-color: lightblue;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+  div:hover {
+    opacity: 0.5;
+  }
+</style>
+<div></div>

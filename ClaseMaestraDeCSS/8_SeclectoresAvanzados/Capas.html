@@ -1,0 +1,24 @@
+<style>
+  @layer base, top;
+
+  /*las capas nos dicen como se van 
+  a colorear los estilos dependiendo de 
+  como se pongan en la parte de arriba
+  en @layer 
+  si se pone @layer base, top:
+  el div se vera azul
+  si se pone @layer top, base:
+  el div se vera amarillo*/
+  @layer base {
+    div{
+      background-color: yellow;
+    }
+  }
+
+  @layer top {
+    div{
+      background-color: aqua;
+    }
+  }
+</style>
+<div>Capas</div>
