@@ -1,0 +1,12 @@
+{
+  "name": "clasemaestradejavascript",
+  "version": "1.0.0",
+  "description": "~~~javascript\r console.log(\"Hello World\");\r console.log(5);\r console.log([1,2,3]); \r console.log({key: 'value'});",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}

@@ -1,0 +1,19 @@
+header{
+  padding: 5rem 0 3rem;
+  /*porqeu queremos que el video este en posicion absoluta*/  
+  position: relative;
+  /*para que el video no se desborde fuera del elemento*/
+  overflow: hidden;
+  background: linear-gradient(var(--black), var(--black2))
+}
+
+header video{
+  /*la posicion absoluta sale del flujo del documento*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  opacity: .2;
+}
